@@ -1,22 +1,44 @@
 
+### isValidArray
+
+
+kind：Function
+
+
+parameters：
+
+- value(any, necessary) 
+
+
+### isValidString
+
+
+kind：Function
+
+
+parameters：
+
+- value(any, necessary) 
+
+
 ### utils
 
 
-类型：Namespace
+kind：Namespace
 
 
 #### abs
 
 
-描述：return abs of the number
+description：return abs of the number
 
 
-类型：Function
+kind：Function
 
 
-参数：
+parameters：
 
-- x(number, 可选) 传入的数值x
+- x(number, optional) 传入的数值x
 
 
 
@@ -24,29 +46,29 @@
 #### Add
 
 
-描述：Add类
+description：Add类
 
 
-类型：Class
+kind：Class
 
 
 ##### add
 
 
-描述：return add of the number
+description：return add of the number
 
 
-类型：Method
+kind：Method
 
 
-参数：
+parameters：
 
-- x(number, 可选) 传入的数值x
-
-
+- x(number, optional) 传入的数值x
 
 
-- y(number, 可选) 传入的数值y
+
+
+- y(number, optional) 传入的数值y
 
 
 
@@ -54,20 +76,20 @@
 #### createFunction
 
 
-描述：创建一个新的函数
+description：创建一个新的函数
 
 
-类型：Function
+kind：Function
 
 
 #### func
 
 
-描述：这是一个创建而来的函数
+description：这是一个创建而来的函数
 
 
-类型：Function
+kind：Function
 
 
-参数：
+parameters：
 - somebody Somebody's name.
