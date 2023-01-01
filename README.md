@@ -1,6 +1,6 @@
 # Simple-tsdoc
 
-`npm i simple-tsdoc`
+`npm i simple-tsdoc -g`
 
 A simple tool to generate markdown documentations by using \*.d.ts files.
 
