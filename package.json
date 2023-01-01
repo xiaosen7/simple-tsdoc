@@ -41,5 +41,10 @@
   "files": [
     "bin",
     "dist"
-  ]
+  ],
+  "homepage": "https://github.com/xiaosen7/simple-tsdoc",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/xiaosen7/simple-tsdoc"
+  }
 }
