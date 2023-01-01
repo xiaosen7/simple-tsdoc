@@ -1,0 +1,11 @@
+{
+	"examples": "examples",
+	"optional": "optional",
+	"necessary": "necessary",
+	"parameters": "parameters",
+	"description": "description",
+	"returns": "return",
+	"kind": "kind",
+	"hello": "hello",
+	"return": "return"
+}

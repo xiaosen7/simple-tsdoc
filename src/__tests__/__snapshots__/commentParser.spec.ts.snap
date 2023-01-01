@@ -1,0 +1,93 @@
+// Vitest Snapshot v1
+
+exports[`commentParser parse @constructor 1`] = `
+{
+  "deprecated": false,
+  "description": "",
+  "modifierTags": [
+    "@constructor",
+  ],
+  "namespace": "其他",
+  "params": [],
+  "returns": undefined,
+  "tags": [],
+}
+`;
+
+exports[`commentParser parse @example 1`] = `
+{
+  "deprecated": false,
+  "description": "",
+  "modifierTags": [],
+  "namespace": "其他",
+  "params": [],
+  "returns": undefined,
+  "tags": [
+    {
+      "description": "\`\`\`ts
+console.log(\\"\\\\\`\\")
+\`\`\`",
+      "name": "@example",
+    },
+  ],
+}
+`;
+
+exports[`commentParser parse @returns 1`] = `
+{
+  "deprecated": false,
+  "description": "",
+  "modifierTags": [],
+  "namespace": "其他",
+  "params": [],
+  "returns": "返回描述",
+  "tags": [],
+}
+`;
+
+exports[`commentParser parse 1`] = `
+{
+  "deprecated": "use xxx instead",
+  "description": "Returns the average of two numbers.
+This is a second sentence.",
+  "modifierTags": [
+    "@beta",
+  ],
+  "namespace": "foobar",
+  "params": [
+    {
+      "description": "The first input number",
+      "name": "x",
+    },
+    {
+      "description": "The second input number",
+      "name": "y",
+    },
+  ],
+  "returns": "The average of \`x\` and \`y\`",
+  "tags": [
+    {
+      "description": "example 1
+
+\`\`\`ts
+console.log(\\"example\\");
+\`\`\`
+
+example 2
+
+\`\`\`ts
+console.log(\\"example2\\");
+\`\`\`
+
+example 3
+
+\`\`\`vue
+<template>
+<button></button>
+</template>
+\`\`\`",
+      "name": "@example",
+    },
+  ],
+}
+`;

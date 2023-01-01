@@ -1,0 +1,9 @@
+{
+  "examples": "示例",
+  "optional": "可选",
+  "necessary": "必须",
+  "parameters": "参数列表",
+  "description": "描述",
+  "returns": "返回",
+  "kind": "种类"
+}

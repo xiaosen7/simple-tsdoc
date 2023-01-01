@@ -1,0 +1,166 @@
+// Vitest Snapshot v1
+
+exports[`apiDocItemsRenderer 1`] = `
+Map {
+  "其他" => [
+    {
+      "apiDocItem": {
+        "annotation": {
+          "deprecated": false,
+          "description": "",
+          "modifierTags": [
+            "@function",
+          ],
+          "namespace": "其他",
+          "params": [],
+          "returns": undefined,
+          "tags": [],
+        },
+        "kind": "Function",
+        "name": "arrowFunction",
+      },
+      "render": [Function],
+    },
+    {
+      "apiDocItem": {
+        "annotation": {
+          "deprecated": false,
+          "description": "",
+          "modifierTags": [
+            "@constructor",
+          ],
+          "namespace": "其他",
+          "params": [],
+          "returns": undefined,
+          "tags": [],
+        },
+        "kind": "Class",
+        "name": "createdClass",
+        "properties": [],
+      },
+      "render": [Function],
+    },
+    {
+      "apiDocItem": {
+        "annotation": {
+          "deprecated": false,
+          "description": "",
+          "modifierTags": [
+            "@function",
+          ],
+          "namespace": "其他",
+          "params": [],
+          "returns": undefined,
+          "tags": [],
+        },
+        "kind": "Function",
+        "name": "createdFunction",
+      },
+      "render": [Function],
+    },
+    {
+      "apiDocItem": {
+        "annotation": {
+          "deprecated": false,
+          "description": "人这个类",
+          "modifierTags": [],
+          "namespace": "其他",
+          "params": [],
+          "returns": undefined,
+          "tags": [],
+        },
+        "kind": "Class",
+        "name": "Person",
+        "properties": [
+          {
+            "annotation": {
+              "deprecated": false,
+              "description": "Constructs a new instance of the \`Person\` class",
+              "modifierTags": [],
+              "namespace": "Person",
+              "params": [],
+              "returns": undefined,
+              "tags": [],
+            },
+            "kind": "Constructor",
+            "name": "(constructor)",
+          },
+          {
+            "annotation": {
+              "deprecated": false,
+              "namespace": "Person",
+              "tags": [],
+            },
+            "kind": "Method",
+            "name": "getName",
+          },
+          {
+            "annotation": {
+              "deprecated": false,
+              "namespace": "Person",
+              "tags": [],
+            },
+            "kind": "Property",
+            "name": "name",
+          },
+        ],
+      },
+      "render": [Function],
+    },
+  ],
+  "math" => [
+    {
+      "apiDocItem": {
+        "annotation": {
+          "deprecated": false,
+          "description": "add 函数",
+          "modifierTags": [
+            "@public",
+          ],
+          "namespace": "math",
+          "params": [],
+          "returns": undefined,
+          "tags": [],
+        },
+        "kind": "Function",
+        "name": "add",
+      },
+      "render": [Function],
+    },
+  ],
+  "foobar" => [
+    {
+      "apiDocItem": {
+        "annotation": {
+          "deprecated": false,
+          "description": "foo函数",
+          "modifierTags": [],
+          "namespace": "foobar",
+          "params": [
+            {
+              "description": "",
+              "name": "name",
+            },
+            {
+              "description": "",
+              "name": "age",
+            },
+          ],
+          "returns": "",
+          "tags": [
+            {
+              "description": "\`\`\`ts
+const res = foo('xiaoming', 18); // => xiaoming18
+\`\`\`",
+              "name": "@example",
+            },
+          ],
+        },
+        "kind": "Function",
+        "name": "foo",
+      },
+      "render": [Function],
+    },
+  ],
+}
+`;
