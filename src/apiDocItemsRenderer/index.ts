@@ -6,7 +6,7 @@ import { resolve } from "path";
 const locales = ["en", "ch"];
 i18n.configure({
   locales,
-  directory: resolve(__dirname, "locales"),
+  directory: resolve(__dirname, "..", "locales"),
 });
 
 export type Lang = typeof locales[number];

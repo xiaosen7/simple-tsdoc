@@ -19,7 +19,7 @@ customTagsMap.set("@author", {
   },
   renderAction: (api) => {
     if (isObject(api.payload)) {
-      api.appendMd(`\n作者：${api.payload.description}\n`);
+      api.appendMd(`\n${api.i18n.__("author")}：${api.payload.description}\n`);
     }
   },
 });

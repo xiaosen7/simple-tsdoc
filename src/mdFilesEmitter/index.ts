@@ -9,7 +9,7 @@ export interface EmitOptions {
 
 export async function emit(renderers: Renderer[], { output }: EmitOptions) {
   const md = helpers.getRendered(renderers);
-  helpers.ensureDir(dirname(output));
+  await helpers.ensureDir(dirname(output));
   await writeFile(output, md);
 }
 

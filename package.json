@@ -1,18 +1,15 @@
 {
   "name": "simple-tsdoc",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Generate markdown documentations by using *.d.ts files",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "bin": {
     "simple-tsdoc": "./bin/index.mjs"
   },
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "tsup",
+    "dev": "rimraf ./dist && tsup --watch",
+    "build": "rimraf ./dist && tsup",
     "test": "vitest --globals",
-    "example:dts": "tsc ./examples/src/index.ts --emitDeclarationOnly -d --outDir ./examples/dist"
+    "example:dts": "tsc ./example/src/index.ts --emitDeclarationOnly -d --outDir ./example/dist"
   },
   "keywords": [
     "tsdoc",
@@ -32,6 +29,7 @@
   "devDependencies": {
     "@types/i18n": "^0.13.6",
     "@types/node": "^18.11.18",
+    "rimraf": "^3.0.2",
     "tsup": "^6.5.0",
     "tsx": "^3.12.1",
     "typescript": "4.8.4",

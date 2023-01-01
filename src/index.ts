@@ -1,11 +1,13 @@
 import { Extractor, ExtractorConfig } from "@microsoft/api-extractor";
-import { writeFile } from "fs/promises";
+import { rm, rmdir, writeFile } from "fs/promises";
 import { resolve } from "path";
 import { parse } from "./apiJsonParser";
 import { Lang, render, RenderOptions } from "./apiDocItemsRenderer";
 import * as emitters from "./mdFilesEmitter";
 import { Renderer } from "./types";
 import { existsSync } from "fs";
+import { ensureDir } from "./mdFilesEmitter/helpers";
+import { getId } from "./utils";
 
 function createTempExtractorConfig(
   mainEntryPointFilePath: string,
@@ -13,35 +15,25 @@ function createTempExtractorConfig(
 ) {
   return {
     mainEntryPointFilePath,
-
-    bundledPackages: [],
-
-    compiler: {},
-
     apiReport: {
       enabled: false,
     },
-
     docModel: {
       enabled: true,
       apiJsonFilePath,
     },
-
     dtsRollup: {
       enabled: false,
     },
-
     tsdocMetadata: {
       enabled: false,
     },
-
     messages: {
       compilerMessageReporting: {
         default: {
           logLevel: "none",
         },
       },
-
       extractorMessageReporting: {
         default: {
           logLevel: "none",
@@ -57,7 +49,10 @@ function createTempExtractorConfig(
 }
 
 async function generateApiJson(mainEntryPointFilePath: string) {
-  const tempDir = resolve(__dirname, "..", "temp");
+  const id = getId();
+  const tempDir = resolve(`temp${id}`);
+  await ensureDir(tempDir);
+
   const apiJsonPath = resolve(tempDir, "api.json");
   const apiExtractorJsonPath = resolve(tempDir, "api-extractor.json");
 
@@ -69,7 +64,7 @@ async function generateApiJson(mainEntryPointFilePath: string) {
 
   Extractor.invoke(extractorConfig);
 
-  return apiJsonPath;
+  return [apiJsonPath, tempDir];
 }
 
 const defaultEmitter = (renderers: Renderer[]) =>
@@ -96,7 +91,7 @@ export async function dtsDoc({
     );
   }
 
-  const apiJsonPath = await generateApiJson(mainEntryPointFilePath);
+  const [apiJsonPath, tempDir] = await generateApiJson(mainEntryPointFilePath);
 
   const apiDocItems = parse(apiJsonPath);
 
@@ -105,4 +100,5 @@ export async function dtsDoc({
   });
 
   await emitter(renderers);
+  await rm(tempDir, { recursive: true });
 }

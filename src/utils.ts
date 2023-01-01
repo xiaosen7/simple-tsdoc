@@ -16,6 +16,10 @@ export function peek<T>(arr: T[]): T | undefined {
   return arr[arr.length - 1];
 }
 
+export function getId() {
+  return Math.random().toString().slice(2);
+}
+
 export function resolveAbsolute(filePath: string) {
   return isAbsolute(filePath) ? filePath : resolve(filePath);
 }

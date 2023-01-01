@@ -4,6 +4,7 @@
   "necessary": "必须",
   "parameters": "参数列表",
   "description": "描述",
+  "author": "作者",
   "returns": "返回",
   "kind": "种类"
 }

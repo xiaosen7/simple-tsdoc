@@ -10,7 +10,8 @@ import { Lang } from "./apiDocItemsRenderer";
 process.addListener("uncaughtException", errorHandler);
 process.addListener("unhandledRejection", errorHandler);
 
-const cli = cac(Object.keys(bin)[0]).version(version);
+const name = Object.keys(bin)[0];
+const cli = cac(name).version(version);
 
 cli.option("-l,--lang [lang]", "Set the language of emitting markdown files.", {
   default: "en",
@@ -21,6 +22,9 @@ cli
   .option("-o, --output [output]", "Specify the output file.", {
     default: "./out.md",
   })
+  .example(
+    `${name} emit ./example/types/utils/index.d.ts  ./example/types/components/index.d.ts -o ./temp/out.md`
+  )
   .action((files: string[], options: emitters.EmitOptions & { lang: Lang }) => {
     action(files, options, emitters.emit, options.lang);
   });
@@ -30,6 +34,9 @@ cli
   .option("-o, --outDir [outDir]", "Specify the output directory.", {
     default: "./out",
   })
+  .example(
+    `${name} emitM ./example/types/utils/index.d.ts  ./example/types/components/index.d.ts -o ./temp/out -r ./example/types/`
+  )
   .option(
     "-r, --rootDir [rootDir]",
     "Specify the root directory of these *.d.ts files. This property will impact output directories structure. If is undefined, then place every *.md files into the outDir. Else place *.md files into the folder in outDir where *.d.ts folder relate rootDir."
