@@ -3,7 +3,7 @@ import * as renderActions from "./renderApiDomItem";
 import i18n from "i18n";
 import { resolve } from "path";
 
-const locales = ["en", "ch"];
+export const locales = ["en", "ch"];
 i18n.configure({
   locales,
   directory: resolve(__dirname, "..", "locales"),

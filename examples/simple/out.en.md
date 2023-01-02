@@ -31,7 +31,6 @@ Kind：Namespace
 
 
 Description：
-
 return abs of the number
 
 
@@ -49,7 +48,6 @@ Parameters：
 
 
 Description：
-
 Add类
 
 
@@ -60,7 +58,6 @@ Kind：Class
 
 
 Description：
-
 return add of the number
 
 
@@ -83,7 +80,6 @@ Parameters：
 
 
 Description：
-
 创建一个新的函数
 
 
@@ -94,7 +90,6 @@ Kind：Function
 
 
 Description：
-
 这是一个创建而来的函数
 
 

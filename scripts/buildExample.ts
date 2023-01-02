@@ -30,7 +30,12 @@ async function main() {
     console.log(`Cache matched, skip build declaration files.`);
   }
 
-  command = `simple-tsdoc emit ./examples/${exampleName}/dist/index.d.ts -o ./examples/${exampleName}/out.md  --report`;
+  command = `simple-tsdoc emit ./examples/${exampleName}/dist/index.d.ts -o ./examples/${exampleName}/out.en.md  --report -l en`;
+  await execaCommand(command, {
+    stdout: "inherit",
+  });
+
+  command = `simple-tsdoc emit ./examples/${exampleName}/dist/index.d.ts -o ./examples/${exampleName}/out.ch.md  --report -l ch`;
   await execaCommand(command, {
     stdout: "inherit",
   });

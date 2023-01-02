@@ -1,0 +1,44 @@
+[
+  {
+    "name": "add",
+    "annotation": {
+      "description": "Adds two numbers together.",
+      "params": [],
+      "tags": [
+        {
+          "name": "@example",
+          "description": "Here's a simple example:\n```ts\n// Prints \"2\":\nconsole.log(add(1,1));\n```"
+        },
+        {
+          "name": "@example",
+          "description": "Here's an example with negative numbers:\n```ts\n// Prints \"0\":\nconsole.log(add(1,-1));\n```\n\n@include ./demo.ts"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "parseFile",
+    "annotation": {
+      "description": "Parses a JSON file.",
+      "params": [
+        {
+          "name": "path",
+          "description": "Full path to the file."
+        }
+      ],
+      "tags": [
+        {
+          "name": "@example",
+          "description": "Parsing a basic JSON file\n\nContents of `file.json`\n```json\n{\n  \"exampleItem\": \"text\"\n}\n```\n\nUsage\n```ts\nconst result = parseFile(\"file.json\");\n```\n\nResult\n```ts\n{\n  exampleItem: 'text',\n}\n```"
+        }
+      ],
+      "modifierTags": [],
+      "returns": "An object containing the JSON data.",
+      "deprecated": false
+    },
+    "kind": "Function"
+  }
+]

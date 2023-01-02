@@ -1,0 +1,24 @@
+[
+  {
+    "name": "func1",
+    "annotation": {
+      "description": "This is **invalid** code link {@link Type1 Type2 Type3}.\n\nThis is **invalid** code link {@link Type1 Type3}.\n\nThis is **invalid** code link {@link `Type1`}.\n\nThis is **invalid** url link {@link https://react.docschina.org/ https://react.docschina.org/docs/getting-started.html}.",
+      "params": [],
+      "tags": [],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "func2",
+    "annotation": {
+      "description": "This is code link `Type1`.\n\nThis is url link https://react.docschina.org/.",
+      "params": [],
+      "tags": [],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  }
+]

@@ -4,8 +4,7 @@ import { dtsDoc } from "./";
 import * as emitters from "./mdFilesEmitter";
 import * as os from "os";
 import { Renderer } from "./types";
-import { resolveAbsolute } from "./utils";
-import { Lang } from "./apiDocItemsRenderer";
+import { Lang, locales } from "./apiDocItemsRenderer";
 
 process.addListener("uncaughtException", errorHandler);
 process.addListener("unhandledRejection", errorHandler);
@@ -14,9 +13,15 @@ const name = Object.keys(bin)[0];
 const cli = cac(name).version(version);
 
 cli
-  .option("-l,--lang [lang]", "Set the language of emitting markdown files.", {
-    default: "en",
-  })
+  .option(
+    "-l,--lang [lang]",
+    `Set the language of emitting markdown files, support value: ${locales.join(
+      "、"
+    )}.`,
+    {
+      default: "en",
+    }
+  )
   .option("--report [report]", "Emit a report json file additionally.");
 
 cli

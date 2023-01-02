@@ -3,7 +3,6 @@
 
 
 Description：
-
 This is **invalid** code link {@link Type1 Type2 Type3}.
 
 This is **invalid** code link {@link Type1 Type3}.
@@ -19,7 +18,6 @@ Kind：Function
 
 
 Description：
-
 This is code link `Type1`.
 
 This is url link https://react.docschina.org/.

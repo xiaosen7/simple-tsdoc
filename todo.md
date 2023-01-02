@@ -8,3 +8,4 @@
   - [ ] typeParam
 - [ ] 策略模式，解耦合
 - [ ] appendBlock api
+- [ ] 静态站点

@@ -6,5 +6,9 @@
   "Description": "描述",
   "Returns": "返回",
   "Kind": "类型",
-  "Author": "作者"
+  "Author": "作者",
+  "Throws": "Throws",
+  "Remarks": "详细解释",
+  "See": "参见",
+  "Deprecated": "被遗弃的"
 }
