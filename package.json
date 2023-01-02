@@ -1,6 +1,6 @@
 {
   "name": "simple-tsdoc",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "A simple cli to generate markdown documentations from *.d.ts files.",
   "bin": {
     "simple-tsdoc": "./bin/index.mjs"
@@ -21,7 +21,7 @@
     "documentation"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@microsoft/api-extractor": "^7.33.7",
     "@microsoft/api-extractor-model": "^7.25.3",
