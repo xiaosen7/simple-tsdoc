@@ -4,6 +4,8 @@
 
 Convert `Arrayable<T>` to `Array<T>` and flatten it
 
+@category Array
+
 
 Kind：Function
 

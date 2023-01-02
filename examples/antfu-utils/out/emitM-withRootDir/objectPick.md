@@ -4,6 +4,8 @@
 
 Create a new subset object by giving keys
 
+@category Object
+
 
 Kind：Function
 

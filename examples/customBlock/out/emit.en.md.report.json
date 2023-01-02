@@ -1,0 +1,13 @@
+[
+  {
+    "name": "func",
+    "annotation": {
+      "description": "@author\n\nsen",
+      "params": [],
+      "tags": [],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  }
+]

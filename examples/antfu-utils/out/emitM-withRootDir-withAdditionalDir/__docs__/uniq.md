@@ -4,6 +4,8 @@
 
 Unique an Array
 
+@category Array
+
 
 Kind：Function
 

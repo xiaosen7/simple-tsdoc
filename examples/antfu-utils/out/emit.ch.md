@@ -4,6 +4,8 @@
 
 Get nth item of Array. Negative for backward
 
+@category Array
+
 
 类型：Function
 
@@ -66,6 +68,8 @@ Call every function in an array
 
 Clamp a number to the index ranage of an array
 
+@category Array
+
 
 类型：Function
 
@@ -82,6 +86,8 @@ Clamp a number to the index ranage of an array
 
 
 Clear undefined fields from an object. It mutates the object
+
+@category Object
 
 
 类型：Function
@@ -142,6 +148,8 @@ await promise() // and be resolved together
 
 Deep merge :P
 
+@category Object
+
 
 类型：Function
 
@@ -159,6 +167,8 @@ Deep merge :P
 
 Ensure prefix of a string
 
+@category String
+
 
 类型：Function
 
@@ -175,6 +185,8 @@ Ensure prefix of a string
 
 
 Convert `Arrayable<T>` to `Array<T>` and flatten it
+
+@category Array
 
 
 类型：Function
@@ -195,7 +207,7 @@ Determines whether an object has a property with the specified name
 
 
 参见：
-https://eslint.org/docs/rules/no-prototype-builtins
+https://eslint.org/docs/rules/no-prototype-builtins  @category Object
 
 
 参数列表：
@@ -225,6 +237,8 @@ Call the function
 
 Type guard for any key, `k`. Marks `k` as a key of `T` if `k` is in `obj`.
 
+@category Object
+
 
 类型：Function
 
@@ -245,6 +259,8 @@ Type guard for any key, `k`. Marks `k` as a key of `T` if `k` is in `obj`.
 
 Type guard to filter out falsy values
 
+@category Guards
+
 
 类型：Function
 
@@ -262,6 +278,8 @@ array.filter(isTruthy)
 
 
 Get last item
+
+@category Array
 
 
 类型：Function
@@ -288,6 +306,8 @@ Get last item
 
 Use rest arguments to merge arrays
 
+@category Array
+
 
 类型：Function
 
@@ -301,6 +321,8 @@ Use rest arguments to merge arrays
 
 
 Move element in an Array
+
+@category Array
 
 
 类型：Function
@@ -322,6 +344,8 @@ Move element in an Array
 
 Type guard to filter out null values
 
+@category Guards
+
 
 类型：Function
 
@@ -339,6 +363,8 @@ array.filter(noNull)
 
 
 Type guard to filter out null-ish values
+
+@category Guards
 
 
 类型：Function
@@ -358,6 +384,8 @@ array.filter(notNullish)
 
 Type guard to filter out null-ish values
 
+@category Guards
+
 
 类型：Function
 
@@ -376,6 +404,8 @@ array.filter(notUndefined)
 
 Strict typed `Object.entries`
 
+@category Object
+
 
 类型：Function
 
@@ -390,6 +420,8 @@ Strict typed `Object.entries`
 
 Strict typed `Object.keys`
 
+@category Object
+
 
 类型：Function
 
@@ -403,6 +435,10 @@ Strict typed `Object.keys`
 
 
 Map key/value pairs for an object, and construct a new one
+
+@category Object
+
+Transform:
 
 
 类型：Function
@@ -446,6 +482,8 @@ objectMap({ a: 1, b: 2 }, (k, v) => k === 'a' ? undefined : [k, v])
 
 Create a new subset object by giving keys
 
+@category Object
+
 
 类型：Function
 
@@ -465,6 +503,8 @@ Create a new subset object by giving keys
 
 
 Divide an array into two parts by a filter function
+
+@category Array
 
 
 类型：Function
@@ -602,6 +642,8 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)
 
 Genrate a range array of numbers. The `stop` is exclusive.
 
+@category Array
+
 
 类型：Function
 
@@ -633,6 +675,8 @@ Genrate a range array of numbers. The `stop` is exclusive.
 
 Remove an item from Array
 
+@category Array
+
 
 类型：Function
 
@@ -649,6 +693,8 @@ Remove an item from Array
 
 
 Replace backslash to slash
+
+@category String
 
 
 类型：Function
@@ -746,6 +792,8 @@ const result = template(
 
 Convert `Arrayable<T>` to `Array<T>`
 
+@category Array
+
 
 类型：Function
 
@@ -759,6 +807,8 @@ Convert `Arrayable<T>` to `Array<T>`
 
 
 Unique an Array
+
+@category Array
 
 
 类型：Function

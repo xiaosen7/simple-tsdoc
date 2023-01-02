@@ -2,12 +2,15 @@
 ### last
 
 
+Get last item
+
+@category Array
+
+
 Kind：Function
 
 
 Parameters：
 
-- array(`readonly T[]`, `necessary`) 
-
-`necessary`) 
+- array(`readonly []`, `necessary`) 
 

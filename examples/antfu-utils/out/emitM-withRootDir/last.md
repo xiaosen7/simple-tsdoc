@@ -2,13 +2,12 @@
 ### last
 
 
-Get last item
-
-
 Kind：Function
 
 
 Parameters：
 
-- array(`readonly []`, `necessary`) 
+- array(`readonly T[]`, `necessary`) 
+
+y(`readonly []`, `necessary`) 
 

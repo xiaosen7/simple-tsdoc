@@ -4,6 +4,8 @@
 
 Clamp a number to the index ranage of an array
 
+@category Array
+
 
 Kind：Function
 

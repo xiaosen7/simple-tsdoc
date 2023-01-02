@@ -4,6 +4,8 @@
 
 Ensure prefix of a string
 
+@category String
+
 
 Kind：Function
 

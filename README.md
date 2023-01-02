@@ -8,6 +8,8 @@ A simple cli to generate markdown documentations from \*.d.ts files.
 
 ## Usage
 
+Your project folder should have `tsconfig.json` and `package.json` file.
+
 ```shell
 Usage:
   $ simple-tsdoc <command> [options]

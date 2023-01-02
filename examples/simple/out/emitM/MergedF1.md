@@ -2,10 +2,18 @@
 ### MergedF1
 
 
-Shortest name: `(MergedF1:namespace)` Full name: `(MergedF1:namespace)`
+Kind：Function
 
 
-Kind：Namespace
+Parameters：
+
+- xy(`string | number`, `necessary`) 
+
+n
+
+
+Parameters：
+
 - x(`string`, `necessary`) 
 
 

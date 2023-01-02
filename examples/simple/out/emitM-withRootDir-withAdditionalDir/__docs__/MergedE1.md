@@ -2,18 +2,20 @@
 ### MergedE1
 
 
-Shortest name: `(MergedE1:class)` Full name: `(MergedE1:class)`
+Shortest name: `(MergedE1:namespace)` Full name: `(MergedE1:namespace)`
 
 
-Kind：Class
+Kind：Namespace
 
 
-#### (constructor)
+#### memberE2
 
 
-Shortest name: `(MergedE1:constructor)` Full name: `(MergedE1:constructor)`
+Shortest name: `(MergedE1:namespace).memberE2` Full name: `(MergedE1:namespace).(memberE2:function)`
 
-NOTE: MergedE1 is also a namespace, so it seems like we need a syntax like `(MergedE1:class,constructor)` or `(MergedE1:class:constructor)`. But only one selector is necessary because namespaces conveniently cannot have constructors.
+
+Kind：Function
+ike we need a syntax like `(MergedE1:class,constructor)` or `(MergedE1:class:constructor)`. But only one selector is necessary because namespaces conveniently cannot have constructors.
 
 
 Kind：Constructor

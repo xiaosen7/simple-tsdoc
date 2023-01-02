@@ -9,7 +9,7 @@ Kind：Function
 
 
 See：
-https://eslint.org/docs/rules/no-prototype-builtins
+https://eslint.org/docs/rules/no-prototype-builtins  @category Object
 
 
 Parameters：

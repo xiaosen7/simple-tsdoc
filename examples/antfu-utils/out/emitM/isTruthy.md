@@ -4,6 +4,8 @@
 
 Type guard to filter out falsy values
 
+@category Guards
+
 
 Kind：Function
 

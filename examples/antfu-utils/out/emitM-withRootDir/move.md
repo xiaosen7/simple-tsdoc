@@ -4,6 +4,8 @@
 
 Move element in an Array
 
+@category Array
+
 
 Kind：Function
 

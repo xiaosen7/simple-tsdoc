@@ -4,6 +4,8 @@
 
 Deep merge :P
 
+@category Object
+
 
 Kind：Function
 

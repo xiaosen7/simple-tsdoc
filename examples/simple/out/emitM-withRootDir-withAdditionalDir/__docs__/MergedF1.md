@@ -2,12 +2,11 @@
 ### MergedF1
 
 
-Shortest name: `(MergedF1:WITH_NUMBERS)` Full name: `(MergedF1:WITH_NUMBERS)`
-
-{@label WITH_NUMBERS}
+Shortest name: `(MergedF1:namespace)` Full name: `(MergedF1:namespace)`
 
 
-Kind：Function
+Kind：Namespace
+- x(`string`, `necessary`) 
 
 
 Parameters：

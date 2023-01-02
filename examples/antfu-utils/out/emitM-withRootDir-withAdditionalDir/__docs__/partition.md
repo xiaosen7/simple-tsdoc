@@ -2,14 +2,7 @@
 ### partition
 
 
-Divide an array into two parts by a filter function
-
-
 Kind：Function
-
-
-Example：
-const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)
 
 
 Parameters：
@@ -18,4 +11,19 @@ Parameters：
 
 
 - f1(`PartitionFilter<T>`, `necessary`) 
+
+
+- f2(`PartitionFilter<T>`, `necessary`) 
+
+
+- f3(`PartitionFilter<T>`, `necessary`) 
+
+
+- f4(`PartitionFilter<T>`, `necessary`) 
+
+
+- f5(`PartitionFilter<T>`, `necessary`) 
+
+
+- f6(`PartitionFilter<T>`, `necessary`) 
 

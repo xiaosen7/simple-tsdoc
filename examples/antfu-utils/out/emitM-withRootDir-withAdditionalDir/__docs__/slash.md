@@ -4,6 +4,8 @@
 
 Replace backslash to slash
 
+@category String
+
 
 Kind：Function
 

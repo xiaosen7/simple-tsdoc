@@ -4,6 +4,8 @@
 
 Use rest arguments to merge arrays
 
+@category Array
+
 
 Kind：Function
 

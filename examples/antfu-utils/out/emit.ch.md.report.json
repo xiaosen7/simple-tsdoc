@@ -2,14 +2,9 @@
   {
     "name": "at",
     "annotation": {
-      "description": "Get nth item of Array. Negative for backward",
+      "description": "Get nth item of Array. Negative for backward\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -45,14 +40,9 @@
   {
     "name": "clampArrayRange",
     "annotation": {
-      "description": "Clamp a number to the index ranage of an array",
+      "description": "Clamp a number to the index ranage of an array\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -61,14 +51,9 @@
   {
     "name": "clearUndefined",
     "annotation": {
-      "description": "Clear undefined fields from an object. It mutates the object",
+      "description": "Clear undefined fields from an object. It mutates the object\n\n@category Object",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Object"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -109,14 +94,9 @@
   {
     "name": "deepMerge",
     "annotation": {
-      "description": "Deep merge :P",
+      "description": "Deep merge :P\n\n@category Object",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Object"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -125,14 +105,9 @@
   {
     "name": "ensurePrefix",
     "annotation": {
-      "description": "Ensure prefix of a string",
+      "description": "Ensure prefix of a string\n\n@category String",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "String"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -141,14 +116,9 @@
   {
     "name": "flattenArrayable",
     "annotation": {
-      "description": "Convert `Arrayable<T>` to `Array<T>` and flatten it",
+      "description": "Convert `Arrayable<T>` to `Array<T>` and flatten it\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -161,12 +131,8 @@
       "params": [],
       "tags": [
         {
-          "name": "@category",
-          "description": "Object"
-        },
-        {
           "name": "@see",
-          "description": "https://eslint.org/docs/rules/no-prototype-builtins"
+          "description": "https://eslint.org/docs/rules/no-prototype-builtins  @category Object"
         }
       ],
       "modifierTags": [],
@@ -188,7 +154,7 @@
   {
     "name": "isKeyOf",
     "annotation": {
-      "description": "Type guard for any key, `k`. Marks `k` as a key of `T` if `k` is in `obj`.",
+      "description": "Type guard for any key, `k`. Marks `k` as a key of `T` if `k` is in `obj`.\n\n@category Object",
       "params": [
         {
           "name": "obj",
@@ -199,12 +165,7 @@
           "description": "key to check existence in `obj`"
         }
       ],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Object"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -213,13 +174,9 @@
   {
     "name": "isTruthy",
     "annotation": {
-      "description": "Type guard to filter out falsy values",
+      "description": "Type guard to filter out falsy values\n\n@category Guards",
       "params": [],
       "tags": [
-        {
-          "name": "@category",
-          "description": "Guards"
-        },
         {
           "name": "@example",
           "description": "array.filter(isTruthy)"
@@ -233,14 +190,9 @@
   {
     "name": "last",
     "annotation": {
-      "description": "Get last item",
+      "description": "Get last item\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -257,14 +209,9 @@
   {
     "name": "mergeArrayable",
     "annotation": {
-      "description": "Use rest arguments to merge arrays",
+      "description": "Use rest arguments to merge arrays\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -273,7 +220,7 @@
   {
     "name": "move",
     "annotation": {
-      "description": "Move element in an Array",
+      "description": "Move element in an Array\n\n@category Array",
       "params": [
         {
           "name": "arr",
@@ -288,12 +235,7 @@
           "description": ""
         }
       ],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -302,13 +244,9 @@
   {
     "name": "noNull",
     "annotation": {
-      "description": "Type guard to filter out null values",
+      "description": "Type guard to filter out null values\n\n@category Guards",
       "params": [],
       "tags": [
-        {
-          "name": "@category",
-          "description": "Guards"
-        },
         {
           "name": "@example",
           "description": "array.filter(noNull)"
@@ -322,13 +260,9 @@
   {
     "name": "notNullish",
     "annotation": {
-      "description": "Type guard to filter out null-ish values",
+      "description": "Type guard to filter out null-ish values\n\n@category Guards",
       "params": [],
       "tags": [
-        {
-          "name": "@category",
-          "description": "Guards"
-        },
         {
           "name": "@example",
           "description": "array.filter(notNullish)"
@@ -342,13 +276,9 @@
   {
     "name": "notUndefined",
     "annotation": {
-      "description": "Type guard to filter out null-ish values",
+      "description": "Type guard to filter out null-ish values\n\n@category Guards",
       "params": [],
       "tags": [
-        {
-          "name": "@category",
-          "description": "Guards"
-        },
         {
           "name": "@example",
           "description": "array.filter(notUndefined)"
@@ -362,14 +292,9 @@
   {
     "name": "objectEntries",
     "annotation": {
-      "description": "Strict typed `Object.entries`",
+      "description": "Strict typed `Object.entries`\n\n@category Object",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Object"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -378,14 +303,9 @@
   {
     "name": "objectKeys",
     "annotation": {
-      "description": "Strict typed `Object.keys`",
+      "description": "Strict typed `Object.keys`\n\n@category Object",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Object"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -394,13 +314,9 @@
   {
     "name": "objectMap",
     "annotation": {
-      "description": "Map key/value pairs for an object, and construct a new one",
+      "description": "Map key/value pairs for an object, and construct a new one\n\n@category Object\n\nTransform:",
       "params": [],
       "tags": [
-        {
-          "name": "@category",
-          "description": "Object\n\nTransform:"
-        },
         {
           "name": "@example",
           "description": "```\nobjectMap({ a: 1, b: 2 }, (k, v) => [k.toString().toUpperCase(), v.toString()])\n// { A: '1', B: '2' }\n```\n\nSwap key/value:"
@@ -422,14 +338,9 @@
   {
     "name": "objectPick",
     "annotation": {
-      "description": "Create a new subset object by giving keys",
+      "description": "Create a new subset object by giving keys\n\n@category Object",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Object"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -438,13 +349,9 @@
   {
     "name": "partition",
     "annotation": {
-      "description": "Divide an array into two parts by a filter function",
+      "description": "Divide an array into two parts by a filter function\n\n@category Array",
       "params": [],
       "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        },
         {
           "name": "@example",
           "description": "const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)"
@@ -498,14 +405,9 @@
   {
     "name": "range",
     "annotation": {
-      "description": "Genrate a range array of numbers. The `stop` is exclusive.",
+      "description": "Genrate a range array of numbers. The `stop` is exclusive.\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -522,14 +424,9 @@
   {
     "name": "remove",
     "annotation": {
-      "description": "Remove an item from Array",
+      "description": "Remove an item from Array\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -538,14 +435,9 @@
   {
     "name": "slash",
     "annotation": {
-      "description": "Replace backslash to slash",
+      "description": "Replace backslash to slash\n\n@category String",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "String"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -605,14 +497,9 @@
   {
     "name": "toArray",
     "annotation": {
-      "description": "Convert `Arrayable<T>` to `Array<T>`",
+      "description": "Convert `Arrayable<T>` to `Array<T>`\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },
@@ -621,14 +508,9 @@
   {
     "name": "uniq",
     "annotation": {
-      "description": "Unique an Array",
+      "description": "Unique an Array\n\n@category Array",
       "params": [],
-      "tags": [
-        {
-          "name": "@category",
-          "description": "Array"
-        }
-      ],
+      "tags": [],
       "modifierTags": [],
       "deprecated": false
     },

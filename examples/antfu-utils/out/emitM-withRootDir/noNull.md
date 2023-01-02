@@ -4,6 +4,8 @@
 
 Type guard to filter out null values
 
+@category Guards
+
 
 Kind：Function
 

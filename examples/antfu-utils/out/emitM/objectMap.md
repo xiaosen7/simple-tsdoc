@@ -4,6 +4,10 @@
 
 Map key/value pairs for an object, and construct a new one
 
+@category Object
+
+Transform:
+
 
 Kind：Function
 

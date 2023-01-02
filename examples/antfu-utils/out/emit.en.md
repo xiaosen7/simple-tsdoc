@@ -4,6 +4,8 @@
 
 Get nth item of Array. Negative for backward
 
+@category Array
+
 
 Kind：Function
 
@@ -66,6 +68,8 @@ Parameters：
 
 Clamp a number to the index ranage of an array
 
+@category Array
+
 
 Kind：Function
 
@@ -82,6 +86,8 @@ Parameters：
 
 
 Clear undefined fields from an object. It mutates the object
+
+@category Object
 
 
 Kind：Function
@@ -142,6 +148,8 @@ Parameters：
 
 Deep merge :P
 
+@category Object
+
 
 Kind：Function
 
@@ -159,6 +167,8 @@ Parameters：
 
 Ensure prefix of a string
 
+@category String
+
 
 Kind：Function
 
@@ -175,6 +185,8 @@ Parameters：
 
 
 Convert `Arrayable<T>` to `Array<T>` and flatten it
+
+@category Array
 
 
 Kind：Function
@@ -195,7 +207,7 @@ Kind：Function
 
 
 See：
-https://eslint.org/docs/rules/no-prototype-builtins
+https://eslint.org/docs/rules/no-prototype-builtins  @category Object
 
 
 Parameters：
@@ -225,6 +237,8 @@ Parameters：
 
 Type guard for any key, `k`. Marks `k` as a key of `T` if `k` is in `obj`.
 
+@category Object
+
 
 Kind：Function
 
@@ -245,6 +259,8 @@ Parameters：
 
 Type guard to filter out falsy values
 
+@category Guards
+
 
 Kind：Function
 
@@ -262,6 +278,8 @@ Parameters：
 
 
 Get last item
+
+@category Array
 
 
 Kind：Function
@@ -288,6 +306,8 @@ Parameters：
 
 Use rest arguments to merge arrays
 
+@category Array
+
 
 Kind：Function
 
@@ -301,6 +321,8 @@ Parameters：
 
 
 Move element in an Array
+
+@category Array
 
 
 Kind：Function
@@ -322,6 +344,8 @@ Parameters：
 
 Type guard to filter out null values
 
+@category Guards
+
 
 Kind：Function
 
@@ -339,6 +363,8 @@ Parameters：
 
 
 Type guard to filter out null-ish values
+
+@category Guards
 
 
 Kind：Function
@@ -358,6 +384,8 @@ Parameters：
 
 Type guard to filter out null-ish values
 
+@category Guards
+
 
 Kind：Function
 
@@ -376,6 +404,8 @@ Parameters：
 
 Strict typed `Object.entries`
 
+@category Object
+
 
 Kind：Function
 
@@ -390,6 +420,8 @@ Parameters：
 
 Strict typed `Object.keys`
 
+@category Object
+
 
 Kind：Function
 
@@ -403,6 +435,10 @@ Parameters：
 
 
 Map key/value pairs for an object, and construct a new one
+
+@category Object
+
+Transform:
 
 
 Kind：Function
@@ -446,6 +482,8 @@ Parameters：
 
 Create a new subset object by giving keys
 
+@category Object
+
 
 Kind：Function
 
@@ -465,6 +503,8 @@ Parameters：
 
 
 Divide an array into two parts by a filter function
+
+@category Array
 
 
 Kind：Function
@@ -602,6 +642,8 @@ Parameters：
 
 Genrate a range array of numbers. The `stop` is exclusive.
 
+@category Array
+
 
 Kind：Function
 
@@ -633,6 +675,8 @@ Parameters：
 
 Remove an item from Array
 
+@category Array
+
 
 Kind：Function
 
@@ -649,6 +693,8 @@ Parameters：
 
 
 Replace backslash to slash
+
+@category String
 
 
 Kind：Function
@@ -746,6 +792,8 @@ Parameters：
 
 Convert `Arrayable<T>` to `Array<T>`
 
+@category Array
+
 
 Kind：Function
 
@@ -759,6 +807,8 @@ Parameters：
 
 
 Unique an Array
+
+@category Array
 
 
 Kind：Function

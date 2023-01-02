@@ -21,9 +21,3 @@ Parameters：
 
 - f4(`PartitionFilter<T>`, `necessary`) 
 
-
-- f5(`PartitionFilter<T>`, `necessary`) 
-
-
-- f6(`PartitionFilter<T>`, `necessary`) 
-

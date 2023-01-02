@@ -1,22 +1,33 @@
-import { Extractor, ExtractorConfig } from "@microsoft/api-extractor";
-import { rm, rmdir, writeFile } from "fs/promises";
-import { resolve } from "path";
+import {
+  Extractor,
+  ExtractorConfig,
+  IConfigFile,
+} from "@microsoft/api-extractor";
+import { TSDocConfigFile } from "@microsoft/tsdoc-config";
+import { copyFile, rm, writeFile } from "fs/promises";
+import { dirname, resolve } from "path";
 import { parse } from "./apiJsonParser";
 import { Lang, render } from "./apiDocItemsRenderer";
 import * as emitters from "./mdFilesEmitter";
 import { Renderer } from "./types";
 import { existsSync } from "fs";
-import { ensureDir } from "./mdFilesEmitter/helpers";
 import { getId, resolveAbsolute } from "./utils";
+import { ensureDir } from "./mdFilesEmitter/helpers";
+import { findUp } from "find-up";
 
-function createTempExtractorConfig(
+async function resolveExtractorConfig(
   mainEntryPointFilePath: string,
-  apiJsonFilePath: string
-) {
+  tempDir: string,
+  tsconfigFile: string,
+  packageJsonFile: string
+): Promise<IConfigFile> {
+  const apiJsonFilePath = resolve(tempDir, "api.json");
+
   return {
     mainEntryPointFilePath,
     apiReport: {
       enabled: false,
+      reportFileName: "report.api.md",
     },
     docModel: {
       enabled: true,
@@ -28,43 +39,62 @@ function createTempExtractorConfig(
     tsdocMetadata: {
       enabled: false,
     },
-    messages: {
-      compilerMessageReporting: {
-        default: {
-          logLevel: "none",
-        },
-      },
-      extractorMessageReporting: {
-        default: {
-          logLevel: "none",
-        },
-      },
-      tsdocMessageReporting: {
-        default: {
-          logLevel: "none",
-        },
-      },
+    projectFolder: dirname(packageJsonFile),
+    compiler: {
+      tsconfigFilePath: tsconfigFile,
     },
   };
 }
+
+function resolveCongFile() {}
 
 async function generateApiJson(mainEntryPointFilePath: string) {
   const id = getId();
   const tempDir = resolve(`temp${id}`);
   await ensureDir(tempDir);
 
-  const apiJsonPath = resolve(tempDir, "api.json");
-  const apiExtractorJsonPath = resolve(tempDir, "api-extractor.json");
+  const apiJsonFilePath = resolve(tempDir, "api.json");
 
-  const config = createTempExtractorConfig(mainEntryPointFilePath, apiJsonPath);
-  await writeFile(apiExtractorJsonPath, JSON.stringify(config, null, 2));
+  const tsdocConfigFile = await findUp(["tsdoc.json"], {
+    cwd: mainEntryPointFilePath,
+  });
+  if (tsdocConfigFile) {
+    console.log(`Using tsdoc.json file: ${tsdocConfigFile}.`);
+  }
 
-  const extractorConfig =
-    ExtractorConfig.loadFileAndPrepare(apiExtractorJsonPath);
+  const tsconfigFile = await findUp(["tsconfig.json"], {
+    cwd: mainEntryPointFilePath,
+  });
+  if (!tsconfigFile) {
+    throw new Error(`Can't find tsconfig.json file.`);
+  }
 
-  Extractor.invoke(extractorConfig);
+  const packageJsonFile = await findUp(["package.json"], {
+    cwd: dirname(mainEntryPointFilePath),
+  });
+  if (!packageJsonFile) {
+    throw new Error(`Can't find package.json file.`);
+  }
 
-  return [apiJsonPath, tempDir];
+  const extractorConfig = ExtractorConfig.prepare({
+    configObject: await resolveExtractorConfig(
+      mainEntryPointFilePath,
+      tempDir,
+      tsconfigFile,
+      packageJsonFile
+    ),
+    configObjectFullPath: undefined,
+    packageJsonFullPath: packageJsonFile,
+    tsdocConfigFile: tsdocConfigFile
+      ? TSDocConfigFile.loadFile(tsdocConfigFile)
+      : undefined,
+  });
+
+  Extractor.invoke(extractorConfig, {
+    showDiagnostics: false,
+  });
+
+  return [apiJsonFilePath, tempDir];
 }
 
 const defaultEmitter = (renderers: Renderer[]) =>
@@ -83,7 +113,7 @@ export async function dtsDoc({
 }) {
   // Check files.
   files.forEach((file) => {
-    if (!existsSync(file)) {
+    if (!existsSync(resolveAbsolute(file))) {
       throw new Error(`The input file ${file} is not exists.`);
     }
 
@@ -96,18 +126,20 @@ export async function dtsDoc({
 
   // Build renderers.
   const renderers: Renderer[] = [];
-  const tasks = files.map(async (file) => {
-    const [apiJsonPath, apiJsonTempDir] = await generateApiJson(
-      resolveAbsolute(file)
-    );
-    const apiDocItems = parse(apiJsonPath);
-    await rm(apiJsonTempDir, { recursive: true });
-    renderers.push(
-      ...render(apiDocItems, {
-        lang,
-      })
-    );
-  });
+  const tasks = files
+    .map((x) => resolveAbsolute(x))
+    .map(async (file) => {
+      const [apiJsonPath, apiJsonTempDir] = await generateApiJson(
+        resolveAbsolute(file)
+      );
+      const apiDocItems = parse(apiJsonPath);
+      await rm(apiJsonTempDir, { recursive: true });
+      renderers.push(
+        ...render(apiDocItems, {
+          lang,
+        })
+      );
+    });
   await Promise.all(tasks);
 
   await emitter(renderers);

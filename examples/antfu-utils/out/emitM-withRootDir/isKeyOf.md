@@ -4,6 +4,8 @@
 
 Type guard for any key, `k`. Marks `k` as a key of `T` if `k` is in `obj`.
 
+@category Object
+
 
 Kind：Function
 

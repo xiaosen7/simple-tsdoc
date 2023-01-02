@@ -4,6 +4,8 @@
 
 Strict typed `Object.entries`
 
+@category Object
+
 
 Kind：Function
 

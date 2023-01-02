@@ -4,6 +4,8 @@
 
 Remove an item from Array
 
+@category Array
+
 
 Kind：Function
 
