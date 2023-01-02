@@ -1,4 +1,4 @@
-import { DocExcerpt, DocNode } from "@microsoft/tsdoc";
+import { DocExcerpt, DocLinkTag, DocNode } from "@microsoft/tsdoc";
 
 export function formatDocNode(docNode: DocNode): string {
   let result = "";
@@ -7,8 +7,17 @@ export function formatDocNode(docNode: DocNode): string {
       result += docNode.content.toString();
     }
 
-    for (const childNode of docNode.getChildNodes()) {
-      result += formatDocNode(childNode);
+    if (docNode instanceof DocLinkTag) {
+      if (docNode.codeDestination) {
+        result += `\`${docNode.codeDestination.emitAsTsdoc()}\``;
+      } else if (docNode.urlDestination) {
+        result += docNode.urlDestination;
+      }
+      // docNode.urlDestination
+    } else {
+      for (const childNode of docNode.getChildNodes()) {
+        result += formatDocNode(childNode);
+      }
     }
   }
 

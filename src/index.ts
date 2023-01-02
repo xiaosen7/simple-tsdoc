@@ -2,12 +2,12 @@ import { Extractor, ExtractorConfig } from "@microsoft/api-extractor";
 import { rm, rmdir, writeFile } from "fs/promises";
 import { resolve } from "path";
 import { parse } from "./apiJsonParser";
-import { Lang, render, RenderOptions } from "./apiDocItemsRenderer";
+import { Lang, render } from "./apiDocItemsRenderer";
 import * as emitters from "./mdFilesEmitter";
 import { Renderer } from "./types";
 import { existsSync } from "fs";
 import { ensureDir } from "./mdFilesEmitter/helpers";
-import { getId } from "./utils";
+import { getId, resolveAbsolute } from "./utils";
 
 function createTempExtractorConfig(
   mainEntryPointFilePath: string,
@@ -73,32 +73,42 @@ const defaultEmitter = (renderers: Renderer[]) =>
   });
 
 export async function dtsDoc({
-  mainEntryPointFilePath,
+  files,
   lang = "en",
   emitter = defaultEmitter,
 }: {
-  mainEntryPointFilePath: string;
+  files: string[];
   lang?: Lang;
   emitter?: (renderers: Renderer[]) => Promise<void>;
 }) {
-  if (!existsSync(mainEntryPointFilePath)) {
-    throw new Error(`The input file ${mainEntryPointFilePath} is not exists.`);
-  }
+  // Check files.
+  files.forEach((file) => {
+    if (!existsSync(file)) {
+      throw new Error(`The input file ${files} is not exists.`);
+    }
 
-  if (!/\.d\.[mc]?ts$/.test(mainEntryPointFilePath)) {
-    throw new Error(
-      `The only supported extensions are '.d.ts', '.d.cts' '.d.mts'`
-    );
-  }
-
-  const [apiJsonPath, tempDir] = await generateApiJson(mainEntryPointFilePath);
-
-  const apiDocItems = parse(apiJsonPath);
-
-  const renderers = render(apiDocItems, {
-    lang,
+    if (!/\.d\.[mc]?ts$/.test(file)) {
+      throw new Error(
+        `The only supported extensions are '.d.ts', '.d.cts' '.d.mts'`
+      );
+    }
   });
 
+  // Build renderers.
+  const renderers: Renderer[] = [];
+  const tasks = files.map(async (file) => {
+    const [apiJsonPath, apiJsonTempDir] = await generateApiJson(
+      resolveAbsolute(file)
+    );
+    const apiDocItems = parse(apiJsonPath);
+    await rm(apiJsonTempDir, { recursive: true });
+    renderers.push(
+      ...render(apiDocItems, {
+        lang,
+      })
+    );
+  });
+  await Promise.all(tasks);
+
   await emitter(renderers);
-  await rm(tempDir, { recursive: true });
 }

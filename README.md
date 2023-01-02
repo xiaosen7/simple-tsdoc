@@ -1,8 +1,12 @@
 # Simple-tsdoc
 
+A simple cli to generate markdown documentations from \*.d.ts files.
+
+## Install
+
 `npm i simple-tsdoc -g`
 
-A simple tool to generate markdown documentations by using \*.d.ts files.
+## Usage
 
 ```shell
 Commands:
@@ -18,3 +22,9 @@ Options:
   -l,--lang [lang]  Set the language of emitting markdown files. (default: en)
   -h, --help        Display this message
 ```
+
+## Examples
+
+See examples folder in [repository](https://github.com/xiaosen7/simple-tsdoc).
+
+Or clone [repository](https://github.com/xiaosen7/simple-tsdoc) in local, after installation (`pnpm install`), then use `pnpm run build:example [exampleName]` to build a example or use `pnpm run build:allExamples` to build all examples.

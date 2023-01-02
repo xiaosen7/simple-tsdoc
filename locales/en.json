@@ -1,12 +1,16 @@
 {
-  "examples": "examples",
-  "optional": "optional",
-  "necessary": "necessary",
-  "parameters": "parameters",
-  "description": "description",
-  "returns": "return",
-  "kind": "kind",
-  "author": "author",
-  "hello": "hello",
-  "return": "return"
+	"Example": "Example",
+	"optional": "optional",
+	"necessary": "necessary",
+	"Parameters": "Parameters",
+	"Description": "Description",
+	"Returns": "Returns",
+	"Kind": "Kind",
+	"Author": "Author",
+	"Deprecated": "Deprecated",
+	"Throws": "Throws",
+	"Remarks": "Remarks",
+	"See": "See",
+	"Param": "Param",
+	"TypeParam": "TypeParam"
 }

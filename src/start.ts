@@ -13,9 +13,11 @@ process.addListener("unhandledRejection", errorHandler);
 const name = Object.keys(bin)[0];
 const cli = cac(name).version(version);
 
-cli.option("-l,--lang [lang]", "Set the language of emitting markdown files.", {
-  default: "en",
-});
+cli
+  .option("-l,--lang [lang]", "Set the language of emitting markdown files.", {
+    default: "en",
+  })
+  .option("--report [report]", "Emit a report json file additionally.");
 
 cli
   .command("emit [...files]", "Emit files into one markdown file.")
@@ -31,7 +33,7 @@ cli
 
 cli
   .command("emitM [...files]", "Emit files into multiple markdown files.")
-  .option("-o, --outDir [outDir]", "Specify the output directory.", {
+  .option("-o, --output [output]", "Specify the output directory.", {
     default: "./out",
   })
   .example(
@@ -39,7 +41,7 @@ cli
   )
   .option(
     "-r, --rootDir [rootDir]",
-    "Specify the root directory of these *.d.ts files. This property will impact output directories structure. If is undefined, then place every *.md files into the outDir. Else place *.md files into the folder in outDir where *.d.ts folder relate rootDir."
+    "Specify the root directory of these *.d.ts files. This property will impact output directories structure. If is undefined, then place every *.md files into the output. Else place *.md files into the folder in output where *.d.ts folder relate rootDir."
   )
   .option(
     "-a, --anotherFolder [anotherFolder]",
@@ -72,11 +74,9 @@ async function action<T extends typeof emitters[keyof typeof emitters]>(
   }
 
   const emitter = (renderers: Renderer[]) => emitFn(renderers, options as any);
-  await Promise.all(
-    files.map((file) =>
-      dtsDoc({ mainEntryPointFilePath: resolveAbsolute(file), emitter, lang })
-    )
-  );
+  await dtsDoc({ files, emitter, lang });
+
+  console.log(`Emit ${options.output} from ${files.join(", ")} successfully.`);
 }
 
 function errorHandler(e: any) {

@@ -5,17 +5,18 @@ import { callCustomTagRenderAction } from "./helpers";
 import * as model from "@microsoft/api-extractor-model";
 import { formatDocNode } from "../shared";
 import { I18n } from "i18n";
+import { pascalCase } from "change-case";
 
-const defaultTagRenderActions: Record<string, RenderAction> = {
-  "@example": (api) => {
-    const { payload, i18n } = api;
-    if (utils.isObject(payload)) {
-      api.appendMd(`\n${i18n.__("examples")}：\n` + payload.description + `\n`);
-    }
-  },
+const tagDefaultRenderAction: RenderAction = (api) => {
+  const { payload, i18n } = api;
+  if (utils.isObject(payload)) {
+    api.appendMd(
+      `\n${i18n.__(pascalCase(payload.name))}：\n` + payload.description + `\n`
+    );
+  }
 };
 
-const renderTypeParameters: RenderAction = (api) => {
+const renderTypedParameters: RenderAction = (api) => {
   const {
     apiDocItem: { apiItem },
     appendMd,
@@ -45,7 +46,7 @@ const renderTypeParameters: RenderAction = (api) => {
       })
       .join("\n");
 
-    appendMd(`\n${i18n.__("parameters")}：\n${parametersContent}\n`);
+    appendMd(`\n${i18n.__("Parameters")}：\n${parametersContent}\n`);
   }
 };
 
@@ -53,7 +54,7 @@ const renderParams: RenderAction = (api) => {
   const { annotation, i18n } = api;
 
   api.appendMd(
-    `\n${i18n.__("parameters")}：\n${annotation
+    `\n${i18n.__("Parameters")}：\n${annotation
       .params!.map(({ name, description }) => {
         return `- ${name} ${description}`;
       })
@@ -63,16 +64,18 @@ const renderParams: RenderAction = (api) => {
 
 const renderDescription: RenderAction = (api) => {
   api.appendMd(
-    `\n${api.i18n.__("description")}：${api.annotation.description}\n`
+    `\n${api.i18n.__("Description")}：\n${api.annotation.description}\n`
   );
 };
 
 const renderReturns: RenderAction = (api) => {
-  api.appendMd(`\n${api.i18n.__("returns")}：${api.annotation.returns}\n`);
+  api.appendMd(`\n${api.i18n.__("Returns")}：${api.annotation.returns}\n`);
 };
 
 const renderDeprecated: RenderAction = (api) => {
-  api.appendMd(`\n${api.i18n.__("returns")}：${api.annotation.returns}\n`);
+  api.appendMd(
+    `\n${api.i18n.__("Deprecated")}：${api.annotation.deprecated}\n`
+  );
 };
 
 const renderModifierTags: RenderAction = (api) => {
@@ -80,7 +83,7 @@ const renderModifierTags: RenderAction = (api) => {
 };
 
 const renderKind: RenderAction = (api) => {
-  api.appendMd(`\n${api.i18n.__("kind")}：${api.apiDocItem.kind.toString()}\n`);
+  api.appendMd(`\n${api.i18n.__("Kind")}：${api.apiDocItem.kind.toString()}\n`);
 };
 
 export function renderApiDomItem(
@@ -128,12 +131,10 @@ export function renderApiDomItem(
     if (customTagsMap.has(tag.name)) {
       callCustomTagRenderAction(customTagsMap.get(tag.name)!, baseApi, tag);
     } else {
-      if (tag.name in defaultTagRenderActions) {
-        defaultTagRenderActions[tag.name]({
-          ...baseApi,
-          payload: tag,
-        });
-      }
+      tagDefaultRenderAction({
+        ...baseApi,
+        payload: tag,
+      });
     }
   });
 
@@ -156,7 +157,7 @@ export function renderApiDomItem(
     apiItem instanceof model.ApiFunction ||
     apiItem instanceof model.ApiMethod
   ) {
-    renderTypeParameters(baseApi);
+    renderTypedParameters(baseApi);
   } else if (utils.isValidArray(annotation.params)) {
     renderParams(baseApi);
   }

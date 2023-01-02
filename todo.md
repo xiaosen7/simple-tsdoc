@@ -1,3 +1,10 @@
 - [x] emitters
   - [x] 输出在所属文件夹下 **docs**
-- [ ] 多语言
+- [x] 多语言
+- [ ] BlockTags
+  - [x] remarks
+  - [x] see
+  - [x] throws
+  - [ ] typeParam
+- [ ] 策略模式，解耦合
+- [ ] appendBlock api

@@ -32,5 +32,5 @@ function createTSDocParser() {
 }
 
 function createRegByTagName(tagName: string) {
-  return new RegExp(tagName.slice(1), "i");
+  return new RegExp(tagName);
 }

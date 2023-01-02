@@ -10,9 +10,9 @@ export function parse(content: string): types.Annotation {
 
   let deprecated: types.Annotation["deprecated"] = false;
   if (docComment.deprecatedBlock) {
-    deprecated =
-      shared.formatDocNode(docComment.deprecatedBlock.content).trim() ||
-      "这个 api 已经被遗弃了.";
+    deprecated = shared
+      .formatDocNode(docComment.deprecatedBlock.content)
+      .trim();
   }
 
   const params: types.Annotation["params"] = [];
@@ -24,20 +24,26 @@ export function parse(content: string): types.Annotation {
   }
 
   const annotationTags: types.Annotation["tags"] = [];
-  docComment.customBlocks.forEach((block) => {
-    const found = helpers.allBlockTagNamesWithTest.find(({ test }) =>
-      test.test(block.blockTag.tagName)
-    );
-    if (!found) {
-      return;
-    }
+  [
+    ...docComment.customBlocks,
+    docComment.remarksBlock!,
+    ...docComment.seeBlocks,
+  ]
+    .filter((x) => Boolean(x))
+    .forEach((block) => {
+      const found = helpers.allBlockTagNamesWithTest.find(({ test }) =>
+        test.test(block.blockTag.tagName)
+      );
+      if (!found) {
+        return;
+      }
 
-    const description = shared.formatDocNode(block.content).trim();
-    annotationTags.push({
-      name: found.name,
-      description: description,
+      const description = shared.formatDocNode(block.content).trim();
+      annotationTags.push({
+        name: found.name,
+        description: description,
+      });
     });
-  });
 
   const modifierTags = docComment.modifierTagSet.nodes.map((x) => x.tagName);
 

@@ -4,22 +4,33 @@ import { dirname, relative, resolve } from "path";
 import { Renderer } from "../types";
 import { resolveAbsolute } from "../utils";
 
+export interface BaseOptions {
+  output: string;
+
+  /**
+   * Whether or not to emit a report file.
+   *
+   * @default false
+   */
+  report?: boolean;
+}
+
 export function getRendered(renderers: Renderer[]) {
   return renderers.reduce((md, { render }) => {
     return md + render();
   }, "");
 }
 
-export interface RenderMultiplyOptions {
+export interface RenderMultiplyOptions extends BaseOptions {
   /**
    * A directory to emit *.md files.
    */
-  outDir: string;
+  output: string;
   /**
    * Specify the root directory of these *.d.ts files. This property will impact output directories structure.
    *
-   * If is undefined, then place every *.md files into the outDir.
-   * Else place *.md files into the folder in outDir where *.d.ts folder relate rootDir.
+   * If is undefined, then place every *.md files into the output.
+   * Else place *.md files into the folder in output where *.d.ts folder relate rootDir.
    */
   rootDir?: string;
   /**
@@ -29,9 +40,9 @@ export interface RenderMultiplyOptions {
 }
 export function getRenderedMultiply(
   renderers: Renderer[],
-  { outDir, rootDir, anotherFolder }: RenderMultiplyOptions
+  { output, rootDir, anotherFolder }: RenderMultiplyOptions
 ) {
-  const absOutDir = resolveAbsolute(outDir);
+  const absOutDir = resolveAbsolute(output);
   const absRootDir = rootDir ? resolveAbsolute(rootDir) : undefined;
 
   const rendered: Array<{

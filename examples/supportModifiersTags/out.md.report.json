@@ -1,0 +1,23 @@
+[
+  {
+    "name": "func",
+    "annotation": {
+      "description": "",
+      "params": [],
+      "tags": [],
+      "modifierTags": [
+        "@alpha",
+        "@beta",
+        "@public",
+        "@experimental",
+        "@internal",
+        "@override",
+        "@readonly",
+        "@sealed",
+        "@virtual"
+      ],
+      "deprecated": ""
+    },
+    "kind": "Function"
+  }
+]
