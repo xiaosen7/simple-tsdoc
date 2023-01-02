@@ -1,6 +1,6 @@
 {
   "name": "simple-tsdoc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple cli to generate markdown documentations from *.d.ts files.",
   "bin": {
     "simple-tsdoc": "./bin/index.mjs"
@@ -15,7 +15,7 @@
   "keywords": [
     "tsdoc",
     "markdown",
-    "generator",
+    "api generator",
     "documentation"
   ],
   "author": "",

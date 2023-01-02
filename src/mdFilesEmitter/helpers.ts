@@ -58,7 +58,7 @@ export function getRenderedMultiply(
     let file: string;
     if (absRootDir) {
       if (!renderer.apiDocItem.apiItem.fileUrlPath) {
-        throw new Error(`Can't get the api(${apiName})'s fileUrlPath.`);
+        continue;
       }
       const absDtsFileDir = dirname(
         resolveAbsolute(renderer.apiDocItem.apiItem.fileUrlPath)

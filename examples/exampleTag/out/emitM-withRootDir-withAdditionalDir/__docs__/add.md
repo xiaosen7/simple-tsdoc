@@ -1,0 +1,35 @@
+
+### add
+
+
+Adds two numbers together.
+
+
+Kind：Function
+
+
+Example：
+Here's a simple example:
+```ts
+// Prints "2":
+console.log(add(1,1));
+```
+
+
+Example：
+Here's an example with negative numbers:
+```ts
+// Prints "0":
+console.log(add(1,-1));
+```
+
+@include ./demo.ts
+
+
+Parameters：
+
+- a(`number`, `necessary`) 
+
+
+- b(`number`, `necessary`) 
+

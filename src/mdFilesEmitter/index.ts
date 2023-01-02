@@ -52,10 +52,6 @@ export async function emitReport(
 
   function getJson(apiDocItem: ApiDocItem): any {
     const { name, annotation, properties, kind } = apiDocItem;
-    let _properties;
-    if (properties) {
-      _properties = properties.map(getJson);
-    }
     return {
       name,
       annotation,

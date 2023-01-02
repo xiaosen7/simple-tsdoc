@@ -29,6 +29,20 @@ Options:
 
 ## Examples
 
-See examples folder in [repository](https://github.com/xiaosen7/simple-tsdoc).
+See [examples folder](<(https://github.com/xiaosen7/simple-tsdoc/tree/master/examples)>).
 
-Or clone [repository](https://github.com/xiaosen7/simple-tsdoc) in local, after installation (`pnpm install`), then use `pnpm run build:example [exampleName]` to build a example or use `pnpm run build:allExamples` to build all examples.
+### Clone and build example
+
+```shell
+git clone https://github.com/xiaosen7/simple-tsdoc
+cd simple-tsdoc
+pnpm install
+pnpm build
+npm link
+
+# Build example
+pnpm build:example [exampleName]
+
+# Build all examples
+pnpm build:allExamples
+```

@@ -9,3 +9,4 @@
 - [ ] 策略模式，解耦合
 - [ ] appendBlock api
 - [ ] 静态站点
+- [ ] namespace 不能输出属性

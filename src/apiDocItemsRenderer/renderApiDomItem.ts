@@ -40,9 +40,9 @@ const renderTypedParameters: RenderAction = (api) => {
           description = formatDocNode(parameter.tsdocParamBlock.content);
         }
 
-        return `\n- ${name}(${parameterType}, ${
+        return `\n- ${name}(\`${parameterType}\`, \`${
           isOptional ? i18n.__("optional") : i18n.__("necessary")
-        }) ${description ?? ""}\n`;
+        }\`) ${description ?? ""}\n`;
       })
       .join("\n");
 
@@ -63,9 +63,7 @@ const renderParams: RenderAction = (api) => {
 };
 
 const renderDescription: RenderAction = (api) => {
-  api.appendMd(
-    `\n${api.i18n.__("Description")}：\n${api.annotation.description}\n`
-  );
+  api.appendMd(`\n${api.annotation.description}\n`);
 };
 
 const renderReturns: RenderAction = (api) => {

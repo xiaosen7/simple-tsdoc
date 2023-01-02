@@ -1,0 +1,637 @@
+[
+  {
+    "name": "at",
+    "annotation": {
+      "description": "Get nth item of Array. Negative for backward",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "at",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "batchInvoke",
+    "annotation": {
+      "description": "Call every function in an array",
+      "params": [],
+      "tags": [],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "clamp",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "clampArrayRange",
+    "annotation": {
+      "description": "Clamp a number to the index ranage of an array",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "clearUndefined",
+    "annotation": {
+      "description": "Clear undefined fields from an object. It mutates the object",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "createPromiseLock",
+    "annotation": {
+      "description": "Create a promise lock",
+      "params": [],
+      "tags": [
+        {
+          "name": "@example",
+          "description": "```\nconst lock = createPromiseLock()\n\nlock.run(async () => {\n  await doSomething()\n})\n\n// in anther context:\nawait lock.wait() // it will wait all tasking finished\n```"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "createSingletonPromise",
+    "annotation": {
+      "description": "Create singleton promise function",
+      "params": [],
+      "tags": [
+        {
+          "name": "@example",
+          "description": "```\nconst promise = createSingletonPromise(async () => { ... })\n\nawait promise()\nawait promise() // all of them will be bind to a single promise instance\nawait promise() // and be resolved together\n```"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "deepMerge",
+    "annotation": {
+      "description": "Deep merge :P",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "ensurePrefix",
+    "annotation": {
+      "description": "Ensure prefix of a string",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "String"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "flattenArrayable",
+    "annotation": {
+      "description": "Convert `Arrayable<T>` to `Array<T>` and flatten it",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "hasOwnProperty",
+    "annotation": {
+      "description": "Determines whether an object has a property with the specified name",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object"
+        },
+        {
+          "name": "@see",
+          "description": "https://eslint.org/docs/rules/no-prototype-builtins"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "invoke",
+    "annotation": {
+      "description": "Call the function",
+      "params": [],
+      "tags": [],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "isKeyOf",
+    "annotation": {
+      "description": "Type guard for any key, `k`. Marks `k` as a key of `T` if `k` is in `obj`.",
+      "params": [
+        {
+          "name": "obj",
+          "description": "object to query for key `k`"
+        },
+        {
+          "name": "k",
+          "description": "key to check existence in `obj`"
+        }
+      ],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "isTruthy",
+    "annotation": {
+      "description": "Type guard to filter out falsy values",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Guards"
+        },
+        {
+          "name": "@example",
+          "description": "array.filter(isTruthy)"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "last",
+    "annotation": {
+      "description": "Get last item",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "last",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "mergeArrayable",
+    "annotation": {
+      "description": "Use rest arguments to merge arrays",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "move",
+    "annotation": {
+      "description": "Move element in an Array",
+      "params": [
+        {
+          "name": "arr",
+          "description": ""
+        },
+        {
+          "name": "from",
+          "description": ""
+        },
+        {
+          "name": "to",
+          "description": ""
+        }
+      ],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "noNull",
+    "annotation": {
+      "description": "Type guard to filter out null values",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Guards"
+        },
+        {
+          "name": "@example",
+          "description": "array.filter(noNull)"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "notNullish",
+    "annotation": {
+      "description": "Type guard to filter out null-ish values",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Guards"
+        },
+        {
+          "name": "@example",
+          "description": "array.filter(notNullish)"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "notUndefined",
+    "annotation": {
+      "description": "Type guard to filter out null-ish values",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Guards"
+        },
+        {
+          "name": "@example",
+          "description": "array.filter(notUndefined)"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "objectEntries",
+    "annotation": {
+      "description": "Strict typed `Object.entries`",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "objectKeys",
+    "annotation": {
+      "description": "Strict typed `Object.keys`",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "objectMap",
+    "annotation": {
+      "description": "Map key/value pairs for an object, and construct a new one",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object\n\nTransform:"
+        },
+        {
+          "name": "@example",
+          "description": "```\nobjectMap({ a: 1, b: 2 }, (k, v) => [k.toString().toUpperCase(), v.toString()])\n// { A: '1', B: '2' }\n```\n\nSwap key/value:"
+        },
+        {
+          "name": "@example",
+          "description": "```\nobjectMap({ a: 1, b: 2 }, (k, v) => [v, k])\n// { 1: 'a', 2: 'b' }\n```\n\nFilter keys:"
+        },
+        {
+          "name": "@example",
+          "description": "```\nobjectMap({ a: 1, b: 2 }, (k, v) => k === 'a' ? undefined : [k, v])\n// { b: 2 }\n```"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "objectPick",
+    "annotation": {
+      "description": "Create a new subset object by giving keys",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Object"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "partition",
+    "annotation": {
+      "description": "Divide an array into two parts by a filter function",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        },
+        {
+          "name": "@example",
+          "description": "const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "partition",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "partition",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "partition",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "partition",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "partition",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "range",
+    "annotation": {
+      "description": "Genrate a range array of numbers. The `stop` is exclusive.",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "range",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "remove",
+    "annotation": {
+      "description": "Remove an item from Array",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "slash",
+    "annotation": {
+      "description": "Replace backslash to slash",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "String"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "sleep",
+    "annotation": {
+      "description": "Promised `setTimeout`",
+      "params": [],
+      "tags": [],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "sum",
+    "annotation": {
+      "tags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "tap",
+    "annotation": {
+      "description": "Pass the value through the callback, and return the value",
+      "params": [],
+      "tags": [
+        {
+          "name": "@example",
+          "description": "```\nfunction createUser(name: string): User {\n  return tap(new User, user => {\n    user.name = name\n  })\n}\n```"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "template",
+    "annotation": {
+      "description": "Dead simple template engine, just like Python's `.format()`",
+      "params": [],
+      "tags": [
+        {
+          "name": "@example",
+          "description": "```\nconst result = template(\n  'Hello {0}! My name is {1}.',\n  'Inès',\n  'Anthony'\n) // Hello Inès! My name is Anthony.\n```"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "toArray",
+    "annotation": {
+      "description": "Convert `Arrayable<T>` to `Array<T>`",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  },
+  {
+    "name": "uniq",
+    "annotation": {
+      "description": "Unique an Array",
+      "params": [],
+      "tags": [
+        {
+          "name": "@category",
+          "description": "Array"
+        }
+      ],
+      "modifierTags": [],
+      "deprecated": false
+    },
+    "kind": "Function"
+  }
+]

@@ -84,12 +84,12 @@ export async function dtsDoc({
   // Check files.
   files.forEach((file) => {
     if (!existsSync(file)) {
-      throw new Error(`The input file ${files} is not exists.`);
+      throw new Error(`The input file ${file} is not exists.`);
     }
 
     if (!/\.d\.[mc]?ts$/.test(file)) {
       throw new Error(
-        `The only supported extensions are '.d.ts', '.d.cts' '.d.mts'`
+        `The only supported extensions are '.d.ts'、'.d.cts'、'.d.mts'.`
       );
     }
   });
