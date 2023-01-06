@@ -1,7 +1,10 @@
 {
   "name": "simple-tsdoc",
-  "version": "1.1.11",
+  "version": "1.1.13",
   "description": "A simple cli to generate markdown documentations from *.d.ts files.",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "bin": {
     "simple-tsdoc": "./bin/index.mjs"
   },
@@ -34,6 +37,7 @@
   },
   "devDependencies": {
     "@types/file-entry-cache": "^5.0.2",
+    "@types/fs-extra": "^9.0.13",
     "@types/i18n": "^0.13.6",
     "@types/node": "^18.11.18",
     "bumpp": "^8.2.1",
@@ -41,6 +45,7 @@
     "fast-glob": "^3.2.12",
     "file-entry-cache": "^6.0.1",
     "find-up": "^6.3.0",
+    "fs-extra": "^11.1.0",
     "rimraf": "^3.0.2",
     "tsup": "^6.5.0",
     "tsx": "^3.12.1",
