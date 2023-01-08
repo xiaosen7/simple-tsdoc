@@ -1,0 +1,4 @@
+## getPackage
+
+**kind**: Function
+

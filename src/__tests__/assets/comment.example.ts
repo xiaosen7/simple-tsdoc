@@ -1,7 +1,0 @@
-/**
- * @example
- *
- * ```ts
- * console.log("\`")
- * ```
- */

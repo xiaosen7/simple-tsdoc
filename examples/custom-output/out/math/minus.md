@@ -1,0 +1,4 @@
+## minus
+
+**kind**: Function
+

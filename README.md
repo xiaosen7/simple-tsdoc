@@ -1,14 +1,22 @@
 # Simple-tsdoc
 
-A simple cli to generate markdown documentations from \*.d.ts files.
+## Introduction
+
+A simple tool to generate markdown documentations from \*.d.ts files, support api and cli usage.
+
+## Features
+
+- **Support custom markdown style**.
+- **Support custom output files**.
+- **Easy to use**: It takes only 5 lines of code to generate the markdown file.
 
 ## Install
 
-`npm i simple-tsdoc -g`
+## Cli Usage
 
-## Usage
+install: `npm i simple-tsdoc -g`
 
-Your project folder should have `tsconfig.json` and `package.json` file.
+Your project folder should have `tsconfig.json` and `package.json` file, it's better to have a `tsdoc.json` file, about [tsdoc.json](https://api-extractor.com/pages/configs/tsdoc_json/).
 
 ```shell
 Usage:

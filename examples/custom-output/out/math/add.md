@@ -1,0 +1,4 @@
+## add
+
+**kind**: Function
+

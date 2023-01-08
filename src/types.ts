@@ -1,6 +1,9 @@
 import * as model from "@microsoft/api-extractor-model";
-import * as tsdoc from "@microsoft/tsdoc";
-import { I18n } from "i18n";
+import { StandardTags } from "@microsoft/tsdoc";
+
+export type ConstructorType<T extends new (...args: any[]) => any> = new (
+  ...args: ConstructorParameters<T>
+) => InstanceType<T>;
 
 export interface ApiDocItem {
   name: string;
@@ -16,32 +19,24 @@ export interface ApiDocItem {
 }
 
 export interface Annotation {
-  deprecated: string | false;
-  description?: string;
-  params?: Array<{ name: string; description: string }>;
-  tags: Array<{
+  description: string;
+  params: Array<{
     name: string;
     description: string;
+    type?: string;
+    isOptional?: boolean;
   }>;
-  modifierTags?: string[];
   returns?: string;
+  tagNameToDescMap: Map<StandardTagName, undefined | string>;
 }
 
-export interface Renderer {
-  render: () => string;
-  apiDocItem: ApiDocItem;
-}
+export type ApiToMarkdownInfoMap = Map<
+  string,
+  {
+    md: string;
+    apiDocItem: ApiDocItem;
+  }
+>;
 
-export interface RenderActionApi {
-  appendMd: (content: string) => void;
-  payload: Annotation["tags"][number] | string | null;
-  annotation: Annotation;
-  apiDocItem: ApiDocItem;
-  i18n: I18n;
-}
-export type RenderAction = (api: RenderActionApi) => any;
-
-export interface CustomTag {
-  property: tsdoc.ITSDocTagDefinitionParameters;
-  renderAction?: RenderAction;
-}
+export type StandardTagName = `@${keyof typeof StandardTags}`;
+export type CustomTagName = `@${string}`;

@@ -1,0 +1,4 @@
+## getJson
+
+**kind**: Function
+

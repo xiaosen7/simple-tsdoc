@@ -1,0 +1,5520 @@
+// Vitest Snapshot v1
+
+exports[`base > generateApiJson => parseApiJson 1`] = `
+"{
+  \\"metadata\\": {
+    \\"toolPackage\\": \\"@microsoft/api-extractor\\",
+    \\"toolVersion\\": \\"7.33.7\\",
+    \\"schemaVersion\\": 1010,
+    \\"oldestForwardsCompatibleVersion\\": 1001,
+    \\"tsdocConfig\\": {
+      \\"$schema\\": \\"https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json\\",
+      \\"noStandardTags\\": true,
+      \\"tagDefinitions\\": [
+        {
+          \\"tagName\\": \\"@alpha\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@beta\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@defaultValue\\",
+          \\"syntaxKind\\": \\"block\\"
+        },
+        {
+          \\"tagName\\": \\"@decorator\\",
+          \\"syntaxKind\\": \\"block\\",
+          \\"allowMultiple\\": true
+        },
+        {
+          \\"tagName\\": \\"@deprecated\\",
+          \\"syntaxKind\\": \\"block\\"
+        },
+        {
+          \\"tagName\\": \\"@eventProperty\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@example\\",
+          \\"syntaxKind\\": \\"block\\",
+          \\"allowMultiple\\": true
+        },
+        {
+          \\"tagName\\": \\"@experimental\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@inheritDoc\\",
+          \\"syntaxKind\\": \\"inline\\"
+        },
+        {
+          \\"tagName\\": \\"@internal\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@label\\",
+          \\"syntaxKind\\": \\"inline\\"
+        },
+        {
+          \\"tagName\\": \\"@link\\",
+          \\"syntaxKind\\": \\"inline\\",
+          \\"allowMultiple\\": true
+        },
+        {
+          \\"tagName\\": \\"@override\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@packageDocumentation\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@param\\",
+          \\"syntaxKind\\": \\"block\\",
+          \\"allowMultiple\\": true
+        },
+        {
+          \\"tagName\\": \\"@privateRemarks\\",
+          \\"syntaxKind\\": \\"block\\"
+        },
+        {
+          \\"tagName\\": \\"@public\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@readonly\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@remarks\\",
+          \\"syntaxKind\\": \\"block\\"
+        },
+        {
+          \\"tagName\\": \\"@returns\\",
+          \\"syntaxKind\\": \\"block\\"
+        },
+        {
+          \\"tagName\\": \\"@sealed\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@see\\",
+          \\"syntaxKind\\": \\"block\\"
+        },
+        {
+          \\"tagName\\": \\"@throws\\",
+          \\"syntaxKind\\": \\"block\\",
+          \\"allowMultiple\\": true
+        },
+        {
+          \\"tagName\\": \\"@typeParam\\",
+          \\"syntaxKind\\": \\"block\\",
+          \\"allowMultiple\\": true
+        },
+        {
+          \\"tagName\\": \\"@virtual\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@betaDocumentation\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        },
+        {
+          \\"tagName\\": \\"@internalRemarks\\",
+          \\"syntaxKind\\": \\"block\\"
+        },
+        {
+          \\"tagName\\": \\"@preapproved\\",
+          \\"syntaxKind\\": \\"modifier\\"
+        }
+      ],
+      \\"supportForTags\\": {
+        \\"@alpha\\": true,
+        \\"@beta\\": true,
+        \\"@defaultValue\\": true,
+        \\"@decorator\\": true,
+        \\"@deprecated\\": true,
+        \\"@eventProperty\\": true,
+        \\"@example\\": true,
+        \\"@experimental\\": true,
+        \\"@inheritDoc\\": true,
+        \\"@internal\\": true,
+        \\"@label\\": true,
+        \\"@link\\": true,
+        \\"@override\\": true,
+        \\"@packageDocumentation\\": true,
+        \\"@param\\": true,
+        \\"@privateRemarks\\": true,
+        \\"@public\\": true,
+        \\"@readonly\\": true,
+        \\"@remarks\\": true,
+        \\"@returns\\": true,
+        \\"@sealed\\": true,
+        \\"@see\\": true,
+        \\"@throws\\": true,
+        \\"@typeParam\\": true,
+        \\"@virtual\\": true,
+        \\"@betaDocumentation\\": true,
+        \\"@internalRemarks\\": true,
+        \\"@preapproved\\": true
+      },
+      \\"reportUnsupportedHtmlElements\\": false
+    }
+  },
+  \\"kind\\": \\"Package\\",
+  \\"canonicalReference\\": \\"simple-tsdoc!\\",
+  \\"docComment\\": \\"\\",
+  \\"name\\": \\"simple-tsdoc\\",
+  \\"preserveMemberOrder\\": false,
+  \\"members\\": [
+    {
+      \\"kind\\": \\"EntryPoint\\",
+      \\"canonicalReference\\": \\"simple-tsdoc!\\",
+      \\"name\\": \\"\\",
+      \\"preserveMemberOrder\\": false,
+      \\"members\\": [
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!ArgumentsType:type\\",
+          \\"docComment\\": \\"/**\\\\n * Infers the arguments type of a function\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type ArgumentsType<T> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T extends (...args: infer A) => any ? A : never\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"ArgumentsType\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!Arrayable:type\\",
+          \\"docComment\\": \\"/**\\\\n * Array, or not yet\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type Arrayable<T> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T | \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Array\\",
+              \\"canonicalReference\\": \\"!Array:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"Arrayable\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!assert_2:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"assert: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(\\\\n  condition: boolean,\\\\n  message: string\\\\n) => asserts \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"condition\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~condition\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"assert_2\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 3
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!at:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Get nth item of Array. Negative for backward\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function at(array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly []\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", index: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"undefined\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"index\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"at\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!at:function(2)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function at<T>(array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", index: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 2,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"index\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"at\\"
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!Awaitable:type\\",
+          \\"docComment\\": \\"/**\\\\n * Promise, or maybe not\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type Awaitable<T> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T | \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PromiseLike\\",
+              \\"canonicalReference\\": \\"!PromiseLike:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"Awaitable\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!batchInvoke:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Call every function in an array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function batchInvoke(functions: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Nullable\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Nullable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<\\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Fn\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Fn:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"void\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 6,
+            \\"endIndex\\": 7
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"functions\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"batchInvoke\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!clamp:function(1)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function clamp(n: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", min: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", max: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 7,
+            \\"endIndex\\": 8
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"n\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"min\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"max\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 5,
+                \\"endIndex\\": 6
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"clamp\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!clampArrayRange:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Clamp a number to the index ranage of an array\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function clampArrayRange(n: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", arr: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly unknown[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"n\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"arr\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"clampArrayRange\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!clearUndefined:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Clear undefined fields from an object. It mutates the object\\\\n *\\\\n * @category Object\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function clearUndefined<T extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"object\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(obj: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"obj\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"clearUndefined\\"
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!Constructor:type\\",
+          \\"docComment\\": \\"/**\\\\n * Constructor\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type Constructor<T = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"void\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"new (...args: any[]) => T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"Constructor\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!createPromiseLock:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Create a promise lock\\\\n *\\\\n * @example\\\\n * \`\`\`\\\\n * const lock = createPromiseLock()\\\\n *\\\\n * lock.run(async () => {\\\\n *   await doSomething()\\\\n * })\\\\n *\\\\n * // in anther context:\\\\n * await lock.wait() // it will wait all tasking finished\\\\n * \`\`\`\\\\n *\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function createPromiseLock(): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"{\\\\n  run<T = void>(fn: () => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Promise\\",
+              \\"canonicalReference\\": \\"!Promise:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Promise\\",
+              \\"canonicalReference\\": \\"!Promise:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>;\\\\n  wait(): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Promise\\",
+              \\"canonicalReference\\": \\"!Promise:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<void>;\\\\n  isWaiting(): boolean;\\\\n  clear(): void;\\\\n}\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 8
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [],
+          \\"name\\": \\"createPromiseLock\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!createSingletonPromise:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Create singleton promise function\\\\n *\\\\n * @example\\\\n * \`\`\`\\\\n * const promise = createSingletonPromise(async () => { ... })\\\\n *\\\\n * await promise()\\\\n * await promise() // all of them will be bind to a single promise instance\\\\n * await promise() // and be resolved together\\\\n * \`\`\`\\\\n *\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function createSingletonPromise<T>(\\\\n  fn: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"() => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Promise\\",
+              \\"canonicalReference\\": \\"!Promise:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"SingletonPromiseReturn\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!SingletonPromiseReturn:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 7
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"fn\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"createSingletonPromise\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!deepMerge:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Deep merge :P\\\\n *\\\\n * @category Object\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function deepMerge<T extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"object\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"object\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", S extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"object\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(\\\\n  target: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  ...sources: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"S[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"DeepMerge\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!DeepMerge:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T, S>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 13,
+            \\"endIndex\\": 15
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"target\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 9,
+                \\"endIndex\\": 10
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"sources\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 11,
+                \\"endIndex\\": 12
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              }
+            },
+            {
+              \\"typeParameterName\\": \\"S\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 5,
+                \\"endIndex\\": 6
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 7,
+                \\"endIndex\\": 8
+              }
+            }
+          ],
+          \\"name\\": \\"deepMerge\\"
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!DeepMerge:type\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type DeepMerge<F, S> = \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"MergeInsertions\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!MergeInsertions:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<{\\\\n  [K in keyof F | keyof S]: K extends keyof S & keyof F\\\\n    ? \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"DeepMerge\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!DeepMerge:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<F[K], S[K]>\\\\n    : K extends keyof S\\\\n    ? S[K]\\\\n    : K extends keyof F\\\\n    ? F[K]\\\\n    : never;\\\\n}>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"DeepMerge\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"F\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            },
+            {
+              \\"typeParameterName\\": \\"S\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 5
+          }
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!ElementOf:type\\",
+          \\"docComment\\": \\"/**\\\\n * Infers the element type of an array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type ElementOf<T> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T extends (infer E)[] ? E : never\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"ElementOf\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!ensurePrefix:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Ensure prefix of a string\\\\n *\\\\n * @category String\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function ensurePrefix(prefix: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", str: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"prefix\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"str\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"ensurePrefix\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!flattenArrayable:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Convert \`Arrayable<T>\` to \`Array<T>\` and flatten it\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function flattenArrayable<T>(\\\\n  array?: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Nullable\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Nullable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<\\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Arrayable\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Arrayable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T | \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Array\\",
+              \\"canonicalReference\\": \\"!Array:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>>>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Array\\",
+              \\"canonicalReference\\": \\"!Array:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 8,
+            \\"endIndex\\": 10
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 7
+              },
+              \\"isOptional\\": true
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"flattenArrayable\\"
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!Fn:type\\",
+          \\"docComment\\": \\"/**\\\\n * Function\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type Fn<T = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"void\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"() => T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"Fn\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!hasOwnProperty:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Determines whether an object has a property with the specified name\\\\n *\\\\n * @see\\\\n *\\\\n * https://eslint.org/docs/rules/no-prototype-builtins  @category Object\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function hasOwnProperty<T>(obj: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", v: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PropertyKey\\",
+              \\"canonicalReference\\": \\"!PropertyKey:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"boolean\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"obj\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"v\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"hasOwnProperty\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!invoke:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Call the function\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function invoke(fn: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Fn\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Fn:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"void\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"fn\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"invoke\\"
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isBoolean:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isBoolean: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(val: any) => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"val\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~val\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is boolean\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isBoolean\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isBrowser:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isBrowser: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"boolean\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isBrowser\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isDef:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isDef: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T = any>(val?: T | undefined) => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"val\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~val\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is T\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isDef\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isFunction:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isFunction: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T extends \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Function\\",
+              \\"canonicalReference\\": \\"!Function:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(val: any) => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"val\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~val\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is T\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isFunction\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 6
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isKeyOf:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Type guard for any key, \`k\`. Marks \`k\` as a key of \`T\` if \`k\` is in \`obj\`.\\\\n *\\\\n * @category Object\\\\n *\\\\n * @param obj - object to query for key \`k\`\\\\n *\\\\n * @param k - key to check existence in \`obj\`\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function isKeyOf<T extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"object\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(obj: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", k: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"keyof any\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"k\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~k\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is keyof T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 7,
+            \\"endIndex\\": 9
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"obj\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"k\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 5,
+                \\"endIndex\\": 6
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"isKeyOf\\"
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isNumber:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isNumber: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(val: any) => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"val\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~val\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is number\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isNumber\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isObject:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isObject: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(val: any) => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"val\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~val\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is object\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isObject\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isString:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isString: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(val: unknown) => \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"val\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~val\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is string\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isString\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isTruthy:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Type guard to filter out falsy values\\\\n *\\\\n * @category Guards\\\\n *\\\\n * @example\\\\n *\\\\n * array.filter(isTruthy)\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function isTruthy<T>(v: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"v\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~v\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"NonNullable\\",
+              \\"canonicalReference\\": \\"!NonNullable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 7
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"v\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"isTruthy\\"
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!isWindow:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"isWindow: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(val: any) => boolean\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"isWindow\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!last:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Get last item\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function last(array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly []\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"undefined\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"last\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!last:function(2)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function last<T>(array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 2,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"last\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!mergeArrayable:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Use rest arguments to merge arrays\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function mergeArrayable<T>(...args: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Nullable\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Nullable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<\\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Arrayable\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Arrayable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>>[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Array\\",
+              \\"canonicalReference\\": \\"!Array:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 6,
+            \\"endIndex\\": 8
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"args\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"mergeArrayable\\"
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!MergeInsertions:type\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type MergeInsertions<T> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T extends object\\\\n  ? {\\\\n      [K in keyof T]: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"MergeInsertions\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!MergeInsertions:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T[K]>;\\\\n    }\\\\n  : T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"MergeInsertions\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 4
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!move:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Move element in an Array\\\\n *\\\\n * @category Array\\\\n *\\\\n * @param arr - \\\\n *\\\\n * @param from - \\\\n *\\\\n * @param to - \\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function move<T>(arr: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", from: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", to: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 7,
+            \\"endIndex\\": 8
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"arr\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"from\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"to\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 5,
+                \\"endIndex\\": 6
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"move\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!noNull:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Type guard to filter out null values\\\\n *\\\\n * @category Guards\\\\n *\\\\n * @example\\\\n *\\\\n * array.filter(noNull)\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function noNull<T>(v: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T | null\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"v\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~v\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Exclude\\",
+              \\"canonicalReference\\": \\"!Exclude:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T, null>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 7
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"v\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"noNull\\"
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!noop:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"noop: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"() => void\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"noop\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!notNullish:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Type guard to filter out null-ish values\\\\n *\\\\n * @category Guards\\\\n *\\\\n * @example\\\\n *\\\\n * array.filter(notNullish)\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function notNullish<T>(v: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T | null | undefined\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"v\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~v\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"NonNullable\\",
+              \\"canonicalReference\\": \\"!NonNullable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 7
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"v\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"notNullish\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!notUndefined:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Type guard to filter out null-ish values\\\\n *\\\\n * @category Guards\\\\n *\\\\n * @example\\\\n *\\\\n * array.filter(notUndefined)\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function notUndefined<T>(v: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"v\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!~v\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\" is \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Exclude\\",
+              \\"canonicalReference\\": \\"!Exclude:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T, undefined>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 7
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"v\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"notUndefined\\"
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!Nullable:type\\",
+          \\"docComment\\": \\"/**\\\\n * Null or whatever\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type Nullable<T> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T | null | undefined\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"Nullable\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!objectEntries:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Strict typed \`Object.entries\`\\\\n *\\\\n * @category Object\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function objectEntries<T extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"object\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(\\\\n  obj: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"[keyof T, T[keyof T]][]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"obj\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"objectEntries\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!objectKeys:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Strict typed \`Object.keys\`\\\\n *\\\\n * @category Object\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function objectKeys<T extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"object\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(obj: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(keyof T)[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"obj\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"objectKeys\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!objectMap:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Map key/value pairs for an object, and construct a new one\\\\n *\\\\n * @category Object\\\\n *\\\\n * Transform:\\\\n *\\\\n * @example\\\\n * \`\`\`\\\\n * objectMap({ a: 1, b: 2 }, (k, v) => [k.toString().toUpperCase(), v.toString()])\\\\n * // { A: '1', B: '2' }\\\\n * \`\`\`\\\\n *\\\\n * Swap key/value:\\\\n *\\\\n * @example\\\\n * \`\`\`\\\\n * objectMap({ a: 1, b: 2 }, (k, v) => [v, k])\\\\n * // { 1: 'a', 2: 'b' }\\\\n * \`\`\`\\\\n *\\\\n * Filter keys:\\\\n *\\\\n * @example\\\\n * \`\`\`\\\\n * objectMap({ a: 1, b: 2 }, (k, v) => k === 'a' ? undefined : [k, v])\\\\n * // { b: 2 }\\\\n * \`\`\`\\\\n *\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function objectMap<K extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", V, NK = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"K\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", NV = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"V\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(\\\\n  obj: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Record\\",
+              \\"canonicalReference\\": \\"!Record:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<K, V>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  fn: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(key: K, value: V) => [NK, NV] | undefined\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Record\\",
+              \\"canonicalReference\\": \\"!Record:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<K, V>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 12,
+            \\"endIndex\\": 14
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"obj\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 7,
+                \\"endIndex\\": 9
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"fn\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 10,
+                \\"endIndex\\": 11
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"K\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            },
+            {
+              \\"typeParameterName\\": \\"V\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            },
+            {
+              \\"typeParameterName\\": \\"NK\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              }
+            },
+            {
+              \\"typeParameterName\\": \\"NV\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 5,
+                \\"endIndex\\": 6
+              }
+            }
+          ],
+          \\"name\\": \\"objectMap\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!objectPick:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Create a new subset object by giving keys\\\\n *\\\\n * @category Object\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function objectPick<O, T extends \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"keyof O\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\">(\\\\n  obj: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"O\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  keys: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  omitUndefined?: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"boolean\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Pick\\",
+              \\"canonicalReference\\": \\"!Pick:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<O, T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 9,
+            \\"endIndex\\": 11
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"obj\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"keys\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 5,
+                \\"endIndex\\": 6
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"omitUndefined\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 7,
+                \\"endIndex\\": 8
+              },
+              \\"isOptional\\": true
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"O\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            },
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"objectPick\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!partition:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Divide an array into two parts by a filter function\\\\n *\\\\n * @category Array\\\\n *\\\\n * @example\\\\n *\\\\n * const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function partition<T>(\\\\n  array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f1: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"[T[], T[]]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 6,
+            \\"endIndex\\": 7
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f1\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"partition\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!partition:function(2)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function partition<T>(\\\\n  array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f1: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f2: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"[T[], T[], T[]]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 9,
+            \\"endIndex\\": 10
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 2,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f1\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f2\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 6,
+                \\"endIndex\\": 8
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"partition\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!partition:function(3)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function partition<T>(\\\\n  array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f1: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f2: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f3: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"[T[], T[], T[], T[]]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 12,
+            \\"endIndex\\": 13
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 3,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f1\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f2\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 6,
+                \\"endIndex\\": 8
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f3\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 9,
+                \\"endIndex\\": 11
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"partition\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!partition:function(4)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function partition<T>(\\\\n  array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f1: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f2: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f3: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f4: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"[T[], T[], T[], T[], T[]]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 15,
+            \\"endIndex\\": 16
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 4,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f1\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f2\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 6,
+                \\"endIndex\\": 8
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f3\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 9,
+                \\"endIndex\\": 11
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f4\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 12,
+                \\"endIndex\\": 14
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"partition\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!partition:function(5)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function partition<T>(\\\\n  array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f1: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f2: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f3: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f4: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f5: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"[T[], T[], T[], T[], T[], T[]]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 18,
+            \\"endIndex\\": 19
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 5,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f1\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f2\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 6,
+                \\"endIndex\\": 8
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f3\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 9,
+                \\"endIndex\\": 11
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f4\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 12,
+                \\"endIndex\\": 14
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f5\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 15,
+                \\"endIndex\\": 17
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"partition\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!partition:function(6)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function partition<T>(\\\\n  array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f1: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f2: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f3: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f4: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f5: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\",\\\\n  f6: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"PartitionFilter\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"\\\\n): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"[T[], T[], T[], T[], T[], T[], T[]]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 21,
+            \\"endIndex\\": 22
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 6,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f1\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f2\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 6,
+                \\"endIndex\\": 8
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f3\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 9,
+                \\"endIndex\\": 11
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f4\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 12,
+                \\"endIndex\\": 14
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f5\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 15,
+                \\"endIndex\\": 17
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"f6\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 18,
+                \\"endIndex\\": 20
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"partition\\"
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!PartitionFilter:type\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type PartitionFilter<T> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(i: T, idx: number, arr: readonly T[]) => any\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"PartitionFilter\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!range:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Genrate a range array of numbers. The \`stop\` is exclusive.\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function range(stop: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"stop\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"range\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!range:function(2)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function range(start: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", stop: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", step?: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 7,
+            \\"endIndex\\": 8
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 2,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"start\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"stop\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"step\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 5,
+                \\"endIndex\\": 6
+              },
+              \\"isOptional\\": true
+            }
+          ],
+          \\"name\\": \\"range\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!remove:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Remove an item from Array\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function remove<T>(array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", value: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"boolean\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"value\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"remove\\"
+        },
+        {
+          \\"kind\\": \\"Interface\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!SingletonPromiseReturn:interface\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"interface SingletonPromiseReturn<T> \\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"SingletonPromiseReturn\\",
+          \\"preserveMemberOrder\\": false,
+          \\"members\\": [
+            {
+              \\"kind\\": \\"CallSignature\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!SingletonPromiseReturn:call(1)\\",
+              \\"docComment\\": \\"\\",
+              \\"excerptTokens\\": [
+                {
+                  \\"kind\\": \\"Content\\",
+                  \\"text\\": \\"(): \\"
+                },
+                {
+                  \\"kind\\": \\"Reference\\",
+                  \\"text\\": \\"Promise\\",
+                  \\"canonicalReference\\": \\"!Promise:interface\\"
+                },
+                {
+                  \\"kind\\": \\"Content\\",
+                  \\"text\\": \\"<T>\\"
+                },
+                {
+                  \\"kind\\": \\"Content\\",
+                  \\"text\\": \\";\\"
+                }
+              ],
+              \\"returnTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 3
+              },
+              \\"releaseTag\\": \\"Public\\",
+              \\"overloadIndex\\": 1,
+              \\"parameters\\": []
+            },
+            {
+              \\"kind\\": \\"PropertySignature\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!SingletonPromiseReturn#reset:member\\",
+              \\"docComment\\": \\"/**\\\\n * Reset current staled promise. Await it to have proper shutdown.\\\\n */\\\\n\\",
+              \\"excerptTokens\\": [
+                {
+                  \\"kind\\": \\"Content\\",
+                  \\"text\\": \\"reset: \\"
+                },
+                {
+                  \\"kind\\": \\"Content\\",
+                  \\"text\\": \\"() => \\"
+                },
+                {
+                  \\"kind\\": \\"Reference\\",
+                  \\"text\\": \\"Promise\\",
+                  \\"canonicalReference\\": \\"!Promise:interface\\"
+                },
+                {
+                  \\"kind\\": \\"Content\\",
+                  \\"text\\": \\"<void>\\"
+                },
+                {
+                  \\"kind\\": \\"Content\\",
+                  \\"text\\": \\";\\"
+                }
+              ],
+              \\"isReadonly\\": false,
+              \\"isOptional\\": false,
+              \\"releaseTag\\": \\"Public\\",
+              \\"name\\": \\"reset\\",
+              \\"propertyTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 4
+              }
+            }
+          ],
+          \\"extendsTokenRanges\\": []
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!slash:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Replace backslash to slash\\\\n *\\\\n * @category String\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function slash(str: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"str\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"slash\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!sleep:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Promised \`setTimeout\`\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function sleep(ms: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", callback?: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Fn\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Fn:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<any>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Promise\\",
+              \\"canonicalReference\\": \\"!Promise:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<void>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 6,
+            \\"endIndex\\": 8
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"ms\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"callback\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": true
+            }
+          ],
+          \\"name\\": \\"sleep\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!sum:function(1)\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function sum(...args: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number[] | number[][]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"number\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"args\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"sum\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!tap:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Pass the value through the callback, and return the value\\\\n *\\\\n * @example\\\\n * \`\`\`\\\\n * function createUser(name: string): User {\\\\n *   return tap(new User, user => {\\\\n *     user.name = name\\\\n *   })\\\\n * }\\\\n * \`\`\`\\\\n *\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function tap<T>(value: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", callback: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(value: T) => void\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"value\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"callback\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"tap\\"
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!template:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Dead simple template engine, just like Python's \`.format()\`\\\\n *\\\\n * @example\\\\n * \`\`\`\\\\n * const result = template(\\\\n *   'Hello {0}! My name is {1}.',\\\\n *   'Inès',\\\\n *   'Anthony'\\\\n * ) // Hello Inès! My name is Anthony.\\\\n * \`\`\`\\\\n *\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function template(str: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\", ...args: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"any[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"string\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 5,
+            \\"endIndex\\": 6
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"str\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            },
+            {
+              \\"parameterName\\": \\"args\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 3,
+                \\"endIndex\\": 4
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"name\\": \\"template\\"
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!timestamp:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"timestamp: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"() => number\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"timestamp\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!toArray:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Convert \`Arrayable<T>\` to \`Array<T>\`\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function toArray<T>(array?: \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Nullable\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Nullable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<\\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Arrayable\\",
+              \\"canonicalReference\\": \\"simple-tsdoc!Arrayable:type\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Reference\\",
+              \\"text\\": \\"Array\\",
+              \\"canonicalReference\\": \\"!Array:interface\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"<T>\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 6,
+            \\"endIndex\\": 8
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 5
+              },
+              \\"isOptional\\": true
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"toArray\\"
+        },
+        {
+          \\"kind\\": \\"Variable\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!toString_2:var\\",
+          \\"docComment\\": \\"\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"toString: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(v: any) => string\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"isReadonly\\": true,
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"toString_2\\",
+          \\"variableTypeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"TypeAlias\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!UnionToIntersection:type\\",
+          \\"docComment\\": \\"/**\\\\n * Defines an intersection type of all union items.\\\\n *\\\\n * @param U - Union of any types that will be intersected.\\\\n *\\\\n * @returns U items intersected\\\\n *\\\\n * @see\\\\n *\\\\n * https://stackoverflow.com/a/50375286/9259330\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare type UnionToIntersection<U> = \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"(\\\\n  U extends unknown ? (k: U) => void : never\\\\n) extends (k: infer I) => void\\\\n  ? I\\\\n  : never\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"releaseTag\\": \\"Public\\",
+          \\"name\\": \\"UnionToIntersection\\",
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"U\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"typeTokenRange\\": {
+            \\"startIndex\\": 1,
+            \\"endIndex\\": 2
+          }
+        },
+        {
+          \\"kind\\": \\"Function\\",
+          \\"canonicalReference\\": \\"simple-tsdoc!uniq:function(1)\\",
+          \\"docComment\\": \\"/**\\\\n * Unique an Array\\\\n *\\\\n * @category Array\\\\n */\\\\n\\",
+          \\"excerptTokens\\": [
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"declare function uniq<T>(array: \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"readonly T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"): \\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\"T[]\\"
+            },
+            {
+              \\"kind\\": \\"Content\\",
+              \\"text\\": \\";\\"
+            }
+          ],
+          \\"fileUrlPath\\": \\"src/__tests__/assets/index.d.ts\\",
+          \\"returnTypeTokenRange\\": {
+            \\"startIndex\\": 3,
+            \\"endIndex\\": 4
+          },
+          \\"releaseTag\\": \\"Public\\",
+          \\"overloadIndex\\": 1,
+          \\"parameters\\": [
+            {
+              \\"parameterName\\": \\"array\\",
+              \\"parameterTypeTokenRange\\": {
+                \\"startIndex\\": 1,
+                \\"endIndex\\": 2
+              },
+              \\"isOptional\\": false
+            }
+          ],
+          \\"typeParameters\\": [
+            {
+              \\"typeParameterName\\": \\"T\\",
+              \\"constraintTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              },
+              \\"defaultTypeTokenRange\\": {
+                \\"startIndex\\": 0,
+                \\"endIndex\\": 0
+              }
+            }
+          ],
+          \\"name\\": \\"uniq\\"
+        }
+      ]
+    }
+  ]
+}
+"
+`;
+
+exports[`base > generateApiJson => parseApiJson 2`] = `
+[
+  {
+    "annotation": {
+      "description": "Get nth item of Array. Negative for backward
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly []",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "index",
+          "type": "number",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "at",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "index",
+          "type": "number",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "at",
+  },
+  {
+    "annotation": {
+      "description": "Call every function in an array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "functions",
+          "type": "Nullable<Fn>[]",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "batchInvoke",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "n",
+          "type": "number",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "min",
+          "type": "number",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "max",
+          "type": "number",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "clamp",
+  },
+  {
+    "annotation": {
+      "description": "Clamp a number to the index ranage of an array
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "n",
+          "type": "number",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "arr",
+          "type": "readonly unknown[]",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "clampArrayRange",
+  },
+  {
+    "annotation": {
+      "description": "Clear undefined fields from an object. It mutates the object
+
+@category Object",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "obj",
+          "type": "T",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "clearUndefined",
+  },
+  {
+    "annotation": {
+      "description": "Create a promise lock",
+      "params": [],
+      "tagNameToDescMap": Map {
+        "@example" => "
+\`\`\`
+const lock = createPromiseLock()
+
+lock.run(async () => {
+  await doSomething()
+})
+
+// in anther context:
+await lock.wait() // it will wait all tasking finished
+\`\`\`",
+      },
+    },
+    "kind": "Function",
+    "name": "createPromiseLock",
+  },
+  {
+    "annotation": {
+      "description": "Create singleton promise function",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "fn",
+          "type": "() => Promise<T>",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+\`\`\`
+const promise = createSingletonPromise(async () => { ... })
+
+await promise()
+await promise() // all of them will be bind to a single promise instance
+await promise() // and be resolved together
+\`\`\`",
+      },
+    },
+    "kind": "Function",
+    "name": "createSingletonPromise",
+  },
+  {
+    "annotation": {
+      "description": "Deep merge :P
+
+@category Object",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "target",
+          "type": "T",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "sources",
+          "type": "S[]",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "deepMerge",
+  },
+  {
+    "annotation": {
+      "description": "Ensure prefix of a string
+
+@category String",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "prefix",
+          "type": "string",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "str",
+          "type": "string",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "ensurePrefix",
+  },
+  {
+    "annotation": {
+      "description": "Convert \`Arrayable<T>\` to \`Array<T>\` and flatten it
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": true,
+          "name": "array",
+          "type": "Nullable<Arrayable<T | Array<T>>>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "flattenArrayable",
+  },
+  {
+    "annotation": {
+      "description": "Determines whether an object has a property with the specified name",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "obj",
+          "type": "T",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "v",
+          "type": "PropertyKey",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@see" => "
+
+https://eslint.org/docs/rules/no-prototype-builtins  @category Object",
+      },
+    },
+    "kind": "Function",
+    "name": "hasOwnProperty",
+  },
+  {
+    "annotation": {
+      "description": "Call the function",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "fn",
+          "type": "Fn",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "invoke",
+  },
+  {
+    "annotation": {
+      "description": "Type guard for any key, \`k\`. Marks \`k\` as a key of \`T\` if \`k\` is in \`obj\`.
+
+@category Object",
+      "params": [
+        {
+          "description": "object to query for key \`k\`",
+          "isOptional": false,
+          "name": "obj",
+          "type": "T",
+        },
+        {
+          "description": "key to check existence in \`obj\`",
+          "isOptional": false,
+          "name": "k",
+          "type": "keyof any",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "isKeyOf",
+  },
+  {
+    "annotation": {
+      "description": "Type guard to filter out falsy values
+
+@category Guards",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "v",
+          "type": "T",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+
+array.filter(isTruthy)",
+      },
+    },
+    "kind": "Function",
+    "name": "isTruthy",
+  },
+  {
+    "annotation": {
+      "description": "Get last item
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly []",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "last",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "last",
+  },
+  {
+    "annotation": {
+      "description": "Use rest arguments to merge arrays
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "args",
+          "type": "Nullable<Arrayable<T>>[]",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "mergeArrayable",
+  },
+  {
+    "annotation": {
+      "description": "Move element in an Array
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "arr",
+          "type": "T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "from",
+          "type": "number",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "to",
+          "type": "number",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "move",
+  },
+  {
+    "annotation": {
+      "description": "Type guard to filter out null values
+
+@category Guards",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "v",
+          "type": "T | null",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+
+array.filter(noNull)",
+      },
+    },
+    "kind": "Function",
+    "name": "noNull",
+  },
+  {
+    "annotation": {
+      "description": "Type guard to filter out null-ish values
+
+@category Guards",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "v",
+          "type": "T | null | undefined",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+
+array.filter(notNullish)",
+      },
+    },
+    "kind": "Function",
+    "name": "notNullish",
+  },
+  {
+    "annotation": {
+      "description": "Type guard to filter out null-ish values
+
+@category Guards",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "v",
+          "type": "T",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+
+array.filter(notUndefined)",
+      },
+    },
+    "kind": "Function",
+    "name": "notUndefined",
+  },
+  {
+    "annotation": {
+      "description": "Strict typed \`Object.entries\`
+
+@category Object",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "obj",
+          "type": "T",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "objectEntries",
+  },
+  {
+    "annotation": {
+      "description": "Strict typed \`Object.keys\`
+
+@category Object",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "obj",
+          "type": "T",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "objectKeys",
+  },
+  {
+    "annotation": {
+      "description": "Map key/value pairs for an object, and construct a new one
+
+@category Object
+
+Transform:",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "obj",
+          "type": "Record<K, V>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "fn",
+          "type": "(key: K, value: V) => [NK, NV] | undefined",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+\`\`\`
+objectMap({ a: 1, b: 2 }, (k, v) => k === 'a' ? undefined : [k, v])
+// { b: 2 }
+\`\`\`",
+      },
+    },
+    "kind": "Function",
+    "name": "objectMap",
+  },
+  {
+    "annotation": {
+      "description": "Create a new subset object by giving keys
+
+@category Object",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "obj",
+          "type": "O",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "keys",
+          "type": "T[]",
+        },
+        {
+          "description": "",
+          "isOptional": true,
+          "name": "omitUndefined",
+          "type": "boolean",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "objectPick",
+  },
+  {
+    "annotation": {
+      "description": "Divide an array into two parts by a filter function
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f1",
+          "type": "PartitionFilter<T>",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+
+const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
+      },
+    },
+    "kind": "Function",
+    "name": "partition",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f1",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f2",
+          "type": "PartitionFilter<T>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "partition",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f1",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f2",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f3",
+          "type": "PartitionFilter<T>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "partition",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f1",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f2",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f3",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f4",
+          "type": "PartitionFilter<T>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "partition",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f1",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f2",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f3",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f4",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f5",
+          "type": "PartitionFilter<T>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "partition",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f1",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f2",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f3",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f4",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f5",
+          "type": "PartitionFilter<T>",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "f6",
+          "type": "PartitionFilter<T>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "partition",
+  },
+  {
+    "annotation": {
+      "description": "Genrate a range array of numbers. The \`stop\` is exclusive.
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "stop",
+          "type": "number",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "range",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "start",
+          "type": "number",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "stop",
+          "type": "number",
+        },
+        {
+          "description": "",
+          "isOptional": true,
+          "name": "step",
+          "type": "number",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "range",
+  },
+  {
+    "annotation": {
+      "description": "Remove an item from Array
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "T[]",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "value",
+          "type": "T",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "remove",
+  },
+  {
+    "annotation": {
+      "description": "Replace backslash to slash
+
+@category String",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "str",
+          "type": "string",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "slash",
+  },
+  {
+    "annotation": {
+      "description": "Promised \`setTimeout\`",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "ms",
+          "type": "number",
+        },
+        {
+          "description": "",
+          "isOptional": true,
+          "name": "callback",
+          "type": "Fn<any>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "sleep",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "args",
+          "type": "number[] | number[][]",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "sum",
+  },
+  {
+    "annotation": {
+      "description": "Pass the value through the callback, and return the value",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "value",
+          "type": "T",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "callback",
+          "type": "(value: T) => void",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+\`\`\`
+function createUser(name: string): User {
+  return tap(new User, user => {
+    user.name = name
+  })
+}
+\`\`\`",
+      },
+    },
+    "kind": "Function",
+    "name": "tap",
+  },
+  {
+    "annotation": {
+      "description": "Dead simple template engine, just like Python's \`.format()\`",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "str",
+          "type": "string",
+        },
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "args",
+          "type": "any[]",
+        },
+      ],
+      "tagNameToDescMap": Map {
+        "@example" => "
+\`\`\`
+const result = template(
+  'Hello {0}! My name is {1}.',
+  'Inès',
+  'Anthony'
+) // Hello Inès! My name is Anthony.
+\`\`\`",
+      },
+    },
+    "kind": "Function",
+    "name": "template",
+  },
+  {
+    "annotation": {
+      "description": "Convert \`Arrayable<T>\` to \`Array<T>\`
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": true,
+          "name": "array",
+          "type": "Nullable<Arrayable<T>>",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "toArray",
+  },
+  {
+    "annotation": {
+      "description": "Unique an Array
+
+@category Array",
+      "params": [
+        {
+          "description": "",
+          "isOptional": false,
+          "name": "array",
+          "type": "readonly T[]",
+        },
+      ],
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Function",
+    "name": "uniq",
+  },
+]
+`;

@@ -60,6 +60,16 @@ async function main() {
     process.exit(0);
   }
 
+  // If has build.ts file in example directory, then just execute it.
+  const exampleDir = getExampleDir(exampleName);
+  const buildScript = resolve(exampleDir, "build.ts");
+  if (existsSync(buildScript)) {
+    await execaCommand(`tsx ${buildScript}`, {
+      stdout: "inherit",
+    });
+    return;
+  }
+
   // Get dts entry.
   let dtsEntry = `./examples/${exampleName}/src/index.d.ts`;
   if (!existsSync(dtsEntry)) {
