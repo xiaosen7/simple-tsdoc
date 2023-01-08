@@ -1,5 +1,11 @@
 # simple-tsdoc
 
+## 2.0.5
+
+### Patch Changes
+
+- Fix bin name.
+
 ## 2.0.4
 
 ### Patch Changes

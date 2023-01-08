@@ -1,6 +1,6 @@
 # Simple-tsdoc
 
-[API](./API.md) | [Cli usage](#cli-usage) | [API usage](#api-usage)
+[API](./API.md) | [Cli usage](#cli-usage) | [API usage](#api-usage) | [Change log](./CHANGELOG.md)
 
 ## Introduction
 
@@ -12,8 +12,6 @@ A simple tool to generate markdown documentations from \*.d.ts files, support ap
 - **Support custom output files**.
 - **Easy to use**: It takes only 5 lines of code to generate the markdown file.
 
-## Install
-
 ## Cli usage
 
 install: `npm i simple-tsdoc -g`
@@ -22,13 +20,13 @@ Your project folder should have `tsconfig.json` and `package.json` file, when yo
 
 ```shell
 Usage:
-  $ tsdoc [...input]
+  $ simple-tsdoc [...input]
 
 Commands:
   [...input]  Specify The d.ts file entries.
 
 For more info, run any command with the `--help` flag:
-  $ tsdoc --help
+  $ simple-tsdoc --help
 
 Options:
   -v, --version          Display version number
@@ -40,11 +38,13 @@ Options:
   -h, --help             Display this message
 
 Examples:
-tsdoc ./dist/index.d.ts -o ./docs/api.md -b "# simple-tsdoc"
-tsdoc ./dist/index.d.ts -s -m -o ./docs
+simple-tsdoc ./dist/index.d.ts -o ./docs/api.md -b "# simple-tsdoc"
+simple-tsdoc ./dist/index.d.ts -s -m -o ./docs
 ```
 
 ## API usage
+
+Support esm or commonjs.
 
 For more info, see [examples folder](<(https://github.com/xiaosen7/simple-tsdoc/tree/master/examples)>).
 
