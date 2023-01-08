@@ -1,8 +1,8 @@
 {
   "name": "simple-tsdoc",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple cli to generate markdown documentations from *.d.ts files.",
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
@@ -14,9 +14,9 @@
     "test": "vitest --globals",
     "build:example": "tsx ./scripts/buildExample.ts",
     "build:allExamples": "tsx ./scripts/buildAllExamples.ts",
-    "prepublishOnly": "npm run build",
     "lint": "eslint src/**/*.ts --cache --quiet",
-    "release": "bumpp --commit --push --tag && npm publish"
+    "release": "pnpm build && pnpm extra-api && pnpm build:allExamples && bumpp --commit --push --tag && changeset publish",
+    "extra-api": "simple-tsdoc ./dist/index.d.ts -o ./API.md --banner \"# simple-tsdoc API\""
   },
   "keywords": [
     "tsdoc",
@@ -37,6 +37,7 @@
     "tmp": "^0.2.1"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@types/file-entry-cache": "^5.0.2",
     "@types/fs-extra": "^9.0.13",
     "@types/i18n": "^0.13.6",
@@ -56,6 +57,7 @@
     "file-entry-cache": "^6.0.1",
     "find-up": "^6.3.0",
     "prettier": "^2.8.1",
+    "pretty-format": "^29.3.1",
     "rimraf": "^3.0.2",
     "tsup": "^6.5.0",
     "tsx": "^3.12.1",
