@@ -1,4 +1,0 @@
-## getJson
-
-**kind**: Function
-

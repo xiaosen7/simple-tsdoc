@@ -2,11 +2,11 @@ import { generateApiJson } from "./generateApiJson";
 import { getApiDocItems } from "./getApiDocItems";
 import { DocNodeFormatter } from "./models/DocNodeFormatter";
 import { Renderer } from "./models/Renderer";
-import { RenderingContext } from "./models/RenderingContext";
+import { IRenderingContext } from "./models/IRenderingContext";
 import { ConstructorType } from "./types";
 
 interface Options {
-  RenderingContextConstructor?: ConstructorType<typeof RenderingContext>;
+  RenderingContextConstructor?: ConstructorType<typeof IRenderingContext>;
   DocNodeFormatterConstructor?: ConstructorType<typeof DocNodeFormatter>;
 }
 /**
@@ -17,7 +17,7 @@ interface Options {
  */
 export async function getMarkdownInfoMap(entry: string, options: Options = {}) {
   const {
-    RenderingContextConstructor = RenderingContext,
+    RenderingContextConstructor = IRenderingContext,
     DocNodeFormatterConstructor = DocNodeFormatter,
   } = options;
 

@@ -1,11 +1,11 @@
 import { resolve } from "path";
-import { tsdoc, RenderingContext } from "../../src/";
+import { tsdoc, IRenderingContext } from "../../";
 
 tsdoc({
   input: [resolve(__dirname, "index.d.ts")],
-  output: resolve(__dirname, "out.md"),
-  banner: "simple-tsdoc",
-  RenderingContextConstructor: RenderingContext,
+  output: resolve(__dirname, "out", "index.md"),
+  banner: "# simple-tsdoc",
+  RenderingContextConstructor: IRenderingContext,
   silent: true,
 }).catch((e) => {
   console.error(e);

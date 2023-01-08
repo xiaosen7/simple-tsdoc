@@ -5,7 +5,7 @@ import { getApiDocItems } from "../getApiDocItems";
 import { DocNodeFormatter } from "../models/DocNodeFormatter";
 import { Renderer } from "../models/Renderer";
 import { emit } from "../emit";
-import { RenderingContext } from "../models/RenderingContext";
+import { IRenderingContext } from "../models/IRenderingContext";
 // import { Renderer } from "../models/Renderer";
 
 describe("base", () => {
@@ -29,7 +29,7 @@ describe("base", () => {
 
     result.clean();
 
-    const renderer = new Renderer(apiDocItems, RenderingContext);
+    const renderer = new Renderer(apiDocItems, IRenderingContext);
 
     await emit(resolve("temp", "out2.md"), renderer.render());
   });

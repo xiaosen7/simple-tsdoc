@@ -4488,6 +4488,26 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
 [
   {
     "annotation": {
+      "description": "Infers the arguments type of a function",
+      "params": [],
+      "signature": "declare type ArgumentsType<T> = T extends (...args: infer A) => any ? A : never;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "ArgumentsType",
+  },
+  {
+    "annotation": {
+      "description": "Array, or not yet",
+      "params": [],
+      "signature": "declare type Arrayable<T> = T | Array<T>;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "Arrayable",
+  },
+  {
+    "annotation": {
       "description": "Get nth item of Array. Negative for backward
 
 @category Array",
@@ -4505,6 +4525,7 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
           "type": "number",
         },
       ],
+      "signature": "declare function at(array: readonly [], index: number): undefined;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4527,10 +4548,21 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
           "type": "number",
         },
       ],
+      "signature": "declare function at<T>(array: readonly T[], index: number): T;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
     "name": "at",
+  },
+  {
+    "annotation": {
+      "description": "Promise, or maybe not",
+      "params": [],
+      "signature": "declare type Awaitable<T> = T | PromiseLike<T>;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "Awaitable",
   },
   {
     "annotation": {
@@ -4543,6 +4575,7 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
           "type": "Nullable<Fn>[]",
         },
       ],
+      "signature": "declare function batchInvoke(functions: Nullable<Fn>[]): void;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4571,6 +4604,7 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
           "type": "number",
         },
       ],
+      "signature": "declare function clamp(n: number, min: number, max: number): number;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4595,6 +4629,7 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
           "type": "readonly unknown[]",
         },
       ],
+      "signature": "declare function clampArrayRange(n: number, arr: readonly unknown[]): number;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4613,6 +4648,7 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
           "type": "T",
         },
       ],
+      "signature": "declare function clearUndefined<T extends object>(obj: T): T;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4620,8 +4656,24 @@ exports[`base > generateApiJson => parseApiJson 2`] = `
   },
   {
     "annotation": {
+      "description": "Constructor",
+      "params": [],
+      "signature": "declare type Constructor<T = void> = new (...args: any[]) => T;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "Constructor",
+  },
+  {
+    "annotation": {
       "description": "Create a promise lock",
       "params": [],
+      "signature": "declare function createPromiseLock(): {
+  run<T = void>(fn: () => Promise<T>): Promise<T>;
+  wait(): Promise<void>;
+  isWaiting(): boolean;
+  clear(): void;
+};",
       "tagNameToDescMap": Map {
         "@example" => "
 \`\`\`
@@ -4650,6 +4702,9 @@ await lock.wait() // it will wait all tasking finished
           "type": "() => Promise<T>",
         },
       ],
+      "signature": "declare function createSingletonPromise<T>(
+  fn: () => Promise<T>
+): SingletonPromiseReturn<T>;",
       "tagNameToDescMap": Map {
         "@example" => "
 \`\`\`
@@ -4683,10 +4738,42 @@ await promise() // and be resolved together
           "type": "S[]",
         },
       ],
+      "signature": "declare function deepMerge<T extends object = object, S extends object = T>(
+  target: T,
+  ...sources: S[]
+): DeepMerge<T, S>;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
     "name": "deepMerge",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [],
+      "signature": "declare type DeepMerge<F, S> = MergeInsertions<{
+  [K in keyof F | keyof S]: K extends keyof S & keyof F
+    ? DeepMerge<F[K], S[K]>
+    : K extends keyof S
+    ? S[K]
+    : K extends keyof F
+    ? F[K]
+    : never;
+}>;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "DeepMerge",
+  },
+  {
+    "annotation": {
+      "description": "Infers the element type of an array",
+      "params": [],
+      "signature": "declare type ElementOf<T> = T extends (infer E)[] ? E : never;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "ElementOf",
   },
   {
     "annotation": {
@@ -4707,6 +4794,7 @@ await promise() // and be resolved together
           "type": "string",
         },
       ],
+      "signature": "declare function ensurePrefix(prefix: string, str: string): string;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4725,10 +4813,23 @@ await promise() // and be resolved together
           "type": "Nullable<Arrayable<T | Array<T>>>",
         },
       ],
+      "signature": "declare function flattenArrayable<T>(
+  array?: Nullable<Arrayable<T | Array<T>>>
+): Array<T>;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
     "name": "flattenArrayable",
+  },
+  {
+    "annotation": {
+      "description": "Function",
+      "params": [],
+      "signature": "declare type Fn<T = void> = () => T;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "Fn",
   },
   {
     "annotation": {
@@ -4747,6 +4848,7 @@ await promise() // and be resolved together
           "type": "PropertyKey",
         },
       ],
+      "signature": "declare function hasOwnProperty<T>(obj: T, v: PropertyKey): boolean;",
       "tagNameToDescMap": Map {
         "@see" => "
 
@@ -4767,6 +4869,7 @@ https://eslint.org/docs/rules/no-prototype-builtins  @category Object",
           "type": "Fn",
         },
       ],
+      "signature": "declare function invoke(fn: Fn): void;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4791,6 +4894,7 @@ https://eslint.org/docs/rules/no-prototype-builtins  @category Object",
           "type": "keyof any",
         },
       ],
+      "signature": "declare function isKeyOf<T extends object>(obj: T, k: keyof any): k is keyof T;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4809,6 +4913,7 @@ https://eslint.org/docs/rules/no-prototype-builtins  @category Object",
           "type": "T",
         },
       ],
+      "signature": "declare function isTruthy<T>(v: T): v is NonNullable<T>;",
       "tagNameToDescMap": Map {
         "@example" => "
 
@@ -4831,6 +4936,7 @@ array.filter(isTruthy)",
           "type": "readonly []",
         },
       ],
+      "signature": "declare function last(array: readonly []): undefined;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4847,6 +4953,7 @@ array.filter(isTruthy)",
           "type": "readonly T[]",
         },
       ],
+      "signature": "declare function last<T>(array: readonly T[]): T;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4865,10 +4972,25 @@ array.filter(isTruthy)",
           "type": "Nullable<Arrayable<T>>[]",
         },
       ],
+      "signature": "declare function mergeArrayable<T>(...args: Nullable<Arrayable<T>>[]): Array<T>;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
     "name": "mergeArrayable",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [],
+      "signature": "declare type MergeInsertions<T> = T extends object
+  ? {
+      [K in keyof T]: MergeInsertions<T[K]>;
+    }
+  : T;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "MergeInsertions",
   },
   {
     "annotation": {
@@ -4895,6 +5017,7 @@ array.filter(isTruthy)",
           "type": "number",
         },
       ],
+      "signature": "declare function move<T>(arr: T[], from: number, to: number): T[];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4913,6 +5036,7 @@ array.filter(isTruthy)",
           "type": "T | null",
         },
       ],
+      "signature": "declare function noNull<T>(v: T | null): v is Exclude<T, null>;",
       "tagNameToDescMap": Map {
         "@example" => "
 
@@ -4935,6 +5059,7 @@ array.filter(noNull)",
           "type": "T | null | undefined",
         },
       ],
+      "signature": "declare function notNullish<T>(v: T | null | undefined): v is NonNullable<T>;",
       "tagNameToDescMap": Map {
         "@example" => "
 
@@ -4957,6 +5082,7 @@ array.filter(notNullish)",
           "type": "T",
         },
       ],
+      "signature": "declare function notUndefined<T>(v: T): v is Exclude<T, undefined>;",
       "tagNameToDescMap": Map {
         "@example" => "
 
@@ -4965,6 +5091,16 @@ array.filter(notUndefined)",
     },
     "kind": "Function",
     "name": "notUndefined",
+  },
+  {
+    "annotation": {
+      "description": "Null or whatever",
+      "params": [],
+      "signature": "declare type Nullable<T> = T | null | undefined;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "Nullable",
   },
   {
     "annotation": {
@@ -4979,6 +5115,9 @@ array.filter(notUndefined)",
           "type": "T",
         },
       ],
+      "signature": "declare function objectEntries<T extends object>(
+  obj: T
+): [keyof T, T[keyof T]][];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -4997,6 +5136,7 @@ array.filter(notUndefined)",
           "type": "T",
         },
       ],
+      "signature": "declare function objectKeys<T extends object>(obj: T): (keyof T)[];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5023,6 +5163,10 @@ Transform:",
           "type": "(key: K, value: V) => [NK, NV] | undefined",
         },
       ],
+      "signature": "declare function objectMap<K extends string, V, NK = K, NV = V>(
+  obj: Record<K, V>,
+  fn: (key: K, value: V) => [NK, NV] | undefined
+): Record<K, V>;",
       "tagNameToDescMap": Map {
         "@example" => "
 \`\`\`
@@ -5059,6 +5203,11 @@ objectMap({ a: 1, b: 2 }, (k, v) => k === 'a' ? undefined : [k, v])
           "type": "boolean",
         },
       ],
+      "signature": "declare function objectPick<O, T extends keyof O>(
+  obj: O,
+  keys: T[],
+  omitUndefined?: boolean
+): Pick<O, T>;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5083,6 +5232,10 @@ objectMap({ a: 1, b: 2 }, (k, v) => k === 'a' ? undefined : [k, v])
           "type": "PartitionFilter<T>",
         },
       ],
+      "signature": "declare function partition<T>(
+  array: readonly T[],
+  f1: PartitionFilter<T>
+): [T[], T[]];",
       "tagNameToDescMap": Map {
         "@example" => "
 
@@ -5115,6 +5268,11 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "PartitionFilter<T>",
         },
       ],
+      "signature": "declare function partition<T>(
+  array: readonly T[],
+  f1: PartitionFilter<T>,
+  f2: PartitionFilter<T>
+): [T[], T[], T[]];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5149,6 +5307,12 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "PartitionFilter<T>",
         },
       ],
+      "signature": "declare function partition<T>(
+  array: readonly T[],
+  f1: PartitionFilter<T>,
+  f2: PartitionFilter<T>,
+  f3: PartitionFilter<T>
+): [T[], T[], T[], T[]];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5189,6 +5353,13 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "PartitionFilter<T>",
         },
       ],
+      "signature": "declare function partition<T>(
+  array: readonly T[],
+  f1: PartitionFilter<T>,
+  f2: PartitionFilter<T>,
+  f3: PartitionFilter<T>,
+  f4: PartitionFilter<T>
+): [T[], T[], T[], T[], T[]];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5235,6 +5406,14 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "PartitionFilter<T>",
         },
       ],
+      "signature": "declare function partition<T>(
+  array: readonly T[],
+  f1: PartitionFilter<T>,
+  f2: PartitionFilter<T>,
+  f3: PartitionFilter<T>,
+  f4: PartitionFilter<T>,
+  f5: PartitionFilter<T>
+): [T[], T[], T[], T[], T[], T[]];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5287,10 +5466,29 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "PartitionFilter<T>",
         },
       ],
+      "signature": "declare function partition<T>(
+  array: readonly T[],
+  f1: PartitionFilter<T>,
+  f2: PartitionFilter<T>,
+  f3: PartitionFilter<T>,
+  f4: PartitionFilter<T>,
+  f5: PartitionFilter<T>,
+  f6: PartitionFilter<T>
+): [T[], T[], T[], T[], T[], T[], T[]];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
     "name": "partition",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [],
+      "signature": "declare type PartitionFilter<T> = (i: T, idx: number, arr: readonly T[]) => any;",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "TypeAlias",
+    "name": "PartitionFilter",
   },
   {
     "annotation": {
@@ -5305,6 +5503,7 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "number",
         },
       ],
+      "signature": "declare function range(stop: number): number[];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5333,6 +5532,7 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "number",
         },
       ],
+      "signature": "declare function range(start: number, stop: number, step?: number): number[];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5357,10 +5557,24 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "T",
         },
       ],
+      "signature": "declare function remove<T>(array: T[], value: T): boolean;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
     "name": "remove",
+  },
+  {
+    "annotation": {
+      "description": "",
+      "params": [],
+      "signature": "interface SingletonPromiseReturn<T> {
+  (): Promise<T>;
+  reset: () => Promise<void>;
+}",
+      "tagNameToDescMap": Map {},
+    },
+    "kind": "Interface",
+    "name": "SingletonPromiseReturn",
   },
   {
     "annotation": {
@@ -5375,6 +5589,7 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "string",
         },
       ],
+      "signature": "declare function slash(str: string): string;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5397,6 +5612,7 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "Fn<any>",
         },
       ],
+      "signature": "declare function sleep(ms: number, callback?: Fn<any>): Promise<void>;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5413,6 +5629,7 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "number[] | number[][]",
         },
       ],
+      "signature": "declare function sum(...args: number[] | number[][]): number;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
@@ -5435,6 +5652,7 @@ const [odd, even] = partition([1, 2, 3, 4], i => i % 2 != 0)",
           "type": "(value: T) => void",
         },
       ],
+      "signature": "declare function tap<T>(value: T, callback: (value: T) => void): T;",
       "tagNameToDescMap": Map {
         "@example" => "
 \`\`\`
@@ -5466,6 +5684,7 @@ function createUser(name: string): User {
           "type": "any[]",
         },
       ],
+      "signature": "declare function template(str: string, ...args: any[]): string;",
       "tagNameToDescMap": Map {
         "@example" => "
 \`\`\`
@@ -5493,10 +5712,35 @@ const result = template(
           "type": "Nullable<Arrayable<T>>",
         },
       ],
+      "signature": "declare function toArray<T>(array?: Nullable<Arrayable<T>>): Array<T>;",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",
     "name": "toArray",
+  },
+  {
+    "annotation": {
+      "description": "Defines an intersection type of all union items.",
+      "params": [
+        {
+          "description": "Union of any types that will be intersected.",
+          "name": "U",
+        },
+      ],
+      "returns": " U items intersected",
+      "signature": "declare type UnionToIntersection<U> = (
+  U extends unknown ? (k: U) => void : never
+) extends (k: infer I) => void
+  ? I
+  : never;",
+      "tagNameToDescMap": Map {
+        "@see" => "
+
+https://stackoverflow.com/a/50375286/9259330",
+      },
+    },
+    "kind": "TypeAlias",
+    "name": "UnionToIntersection",
   },
   {
     "annotation": {
@@ -5511,6 +5755,7 @@ const result = template(
           "type": "readonly T[]",
         },
       ],
+      "signature": "declare function uniq<T>(array: readonly T[]): T[];",
       "tagNameToDescMap": Map {},
     },
     "kind": "Function",

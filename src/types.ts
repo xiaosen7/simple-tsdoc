@@ -28,6 +28,7 @@ export interface Annotation {
   }>;
   returns?: string;
   tagNameToDescMap: Map<StandardTagName, undefined | string>;
+  signature: string;
 }
 
 export type ApiToMarkdownInfoMap = Map<

@@ -1,5 +1,5 @@
 import { ApiDocItem, ApiToMarkdownInfoMap, ConstructorType } from "../types";
-import { RenderingContext } from "./RenderingContext";
+import { IRenderingContext } from "./IRenderingContext";
 
 /**
  * Render {@link ApiDocItem} to get {@link ApiToMarkdownInfoMap}.
@@ -14,19 +14,19 @@ import { RenderingContext } from "./RenderingContext";
       docNodeFormatter: new DocNodeFormatter(),
   });
   result.clean();
- * const renderer = new Renderer(apiDocItems, RenderingContext);
+ * const renderer = new Renderer(apiDocItems, IRenderingContext);
   console.log(renderer.render())
  * ```
  */
 export class Renderer {
   private readonly _apiDocItems: ApiDocItem[];
   private readonly _RenderingContextConstructor: ConstructorType<
-    typeof RenderingContext
+    typeof IRenderingContext
   >;
 
   constructor(
     apiDocItems: ApiDocItem[],
-    RenderingContextConstructor: ConstructorType<typeof RenderingContext>
+    RenderingContextConstructor: ConstructorType<typeof IRenderingContext>
   ) {
     this._apiDocItems = apiDocItems;
     this._RenderingContextConstructor = RenderingContextConstructor;
@@ -45,16 +45,15 @@ export class Renderer {
 
   private _renderApiDocItem(
     apiDocItem: ApiDocItem,
-    parent?: RenderingContext
+    parent?: IRenderingContext
   ): string {
-    const titleLevel = (parent?.titleLevel ?? 1) + 1;
+    const titleLevel = (parent?.titleLevel ?? 2) + 1; // beginning is 3
     const ctx = new this._RenderingContextConstructor(apiDocItem, titleLevel);
 
     let md = ctx.draw();
 
     if (apiDocItem.properties) {
       apiDocItem.properties.forEach((property) => {
-        // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
         md += this._renderApiDocItem(property, ctx);
       });
     }

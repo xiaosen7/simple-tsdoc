@@ -1,4 +1,0 @@
-## multiply
-
-**kind**: Function
-

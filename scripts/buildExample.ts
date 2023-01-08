@@ -60,6 +60,11 @@ async function main() {
     process.exit(0);
   }
 
+  const outDir = `./examples/${exampleName}/out`;
+  await execaCommand(`rimraf ${outDir}`, {
+    stdout: "inherit",
+  });
+
   // If has build.ts file in example directory, then just execute it.
   const exampleDir = getExampleDir(exampleName);
   const buildScript = resolve(exampleDir, "build.ts");
@@ -86,9 +91,7 @@ async function main() {
   }
 
   // Emit
-  const outDir = `./examples/${exampleName}/out`;
   const commands = [
-    `rimraf ${outDir}`,
     `node ./dist/start.mjs emit ${dtsEntry} -o ${outDir}/emit.en.md  --report -l en`,
     `node ./dist/start.mjs emit ${dtsEntry} -o ${outDir}/emit.ch.md  --report -l ch`,
     `node ./dist/start.mjs emitM ${dtsEntry} -o ${outDir}/emitM`,

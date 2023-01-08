@@ -1,7 +1,7 @@
 import { cac } from "cac";
 import { version, bin } from "../package.json";
 import * as os from "os";
-import { tsdoc, TsDocOptions } from "./";
+import { TsDocOptions, tsdoc } from "./";
 
 function errorHandler(e: any) {
   console.error(`${os.EOL} + ${e.message || e} + ${os.EOL}`);
@@ -32,7 +32,7 @@ cli
     default: "",
   })
   .command("[...input]", "Specify The d.ts file entries.")
-  .example(`${name} ./dist/index.d.ts -o ./docs/api.md -b '# simple-tsdoc'`)
+  .example(`${name} ./dist/index.d.ts -o ./docs/api.md -b "# simple-tsdoc"`)
   .example(`${name} ./dist/index.d.ts -s -m -o ./docs`)
   .action(async (input: string[], options: TsDocOptions) => {
     await tsdoc({

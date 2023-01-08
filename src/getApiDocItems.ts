@@ -11,14 +11,34 @@ const canVisitKinds = [
   model.ApiItemKind.Property,
   model.ApiItemKind.Constructor,
   model.ApiItemKind.Namespace,
-  // model.ApiItemKind.Interface,
-  // model.ApiItemKind.TypeAlias
+  model.ApiItemKind.Interface,
+  model.ApiItemKind.TypeAlias,
 ] as const;
 type CanVisitKind = typeof canVisitKinds[number];
 type AfterVisitKind = `After${CanVisitKind}`;
 type Visitor = Partial<
   Record<CanVisitKind | AfterVisitKind, (apiDocItem: types.ApiDocItem) => any>
 >;
+
+/**
+ * Analyze the api.json file to get {@link types.ApiDocItem}.
+ * @param apiJsonPath
+ * @param options
+ * @returns
+ */
+export function getApiDocItems(
+  apiJsonPath: string,
+  options: GetApiDocItemsOptions
+): types.ApiDocItem[] {
+  const apiModel: model.ApiModel = new model.ApiModel();
+  const apiPackage: model.ApiPackage = apiModel.loadPackage(apiJsonPath);
+
+  const docItems: types.ApiDocItem[] = [];
+  const visitor = createVisitor(docItems);
+  traversePackage(apiPackage, visitor, options.docNodeFormatter);
+
+  return docItems;
+}
 
 function getAnnotation(
   apiItem: model.ApiDeclaredItem,
@@ -30,12 +50,14 @@ function getAnnotation(
     tagNameToDescMap: new Map(),
     description: "",
     params: [],
+    signature: getSignatureFromApiItem(apiItem),
   };
 
   // get params
   if (
     apiItem instanceof model.ApiFunction ||
-    apiItem instanceof model.ApiMethod
+    apiItem instanceof model.ApiMethod ||
+    apiItem instanceof model.ApiConstructor
   ) {
     if (apiItem.parameters.length > 0) {
       annotation.params = apiItem.parameters.map((parameter) => {
@@ -110,6 +132,22 @@ function getAnnotation(
   return annotation;
 }
 
+function getSignatureFromApiItem(apiItem: model.ApiDeclaredItem) {
+  let ret = apiItem.getExcerptWithModifiers();
+
+  if (apiItem instanceof model.ApiInterface) {
+    ret += "{";
+    apiItem.members.forEach((memberApiItem) => {
+      if (memberApiItem instanceof model.ApiDeclaredItem) {
+        ret += `\n  ${getSignatureFromApiItem(memberApiItem)}`;
+      }
+    });
+    ret += "\n}";
+  }
+
+  return ret;
+}
+
 function traversePackage(
   apiPackage: model.ApiPackage,
   visitor: Visitor,
@@ -123,40 +161,33 @@ function traverseCallback(
   visitor: Visitor,
   docNodeFormatter: DocNodeFormatter
 ): void {
-  let apiDocItem!: types.ApiDocItem;
-  let kind!: model.ApiItemKind;
-  let canVisit = false;
+  const canVisit =
+    apiItem instanceof model.ApiDeclaredItem &&
+    canVisitKinds.includes(apiItem.kind as any);
 
-  if (apiItem instanceof model.ApiDeclaredItem) {
-    const annotation = getAnnotation(apiItem, docNodeFormatter);
-    kind = getKind(apiItem);
-
-    if (canVisitKinds.includes(kind as any)) {
-      apiDocItem = {
-        annotation,
-        kind,
-        name: apiItem.displayName,
-        apiItem,
-      };
-
-      canVisit = true;
-    }
+  if (!canVisit) {
+    traverseMembers(apiItem.members, visitor, docNodeFormatter);
+    return;
   }
 
-  if (canVisit) {
-    const fn = visitor[kind as CanVisitKind];
-    if (fn != null) {
-      fn(apiDocItem);
-    }
+  const annotation = getAnnotation(apiItem, docNodeFormatter);
+  const apiDocItem: types.ApiDocItem = {
+    annotation,
+    kind: apiItem.kind,
+    name: apiItem.displayName,
+    apiItem,
+  };
+
+  const visitFn = visitor[apiItem.kind as CanVisitKind];
+  if (visitFn) {
+    visitFn(apiDocItem);
   }
 
   traverseMembers(apiItem.members, visitor, docNodeFormatter);
 
-  if (canVisit) {
-    const after = visitor[getAfterKind(kind as CanVisitKind)];
-    if (after != null) {
-      after(apiDocItem);
-    }
+  const after = visitor[getAfterKind(apiItem.kind as CanVisitKind)];
+  if (after) {
+    after(apiDocItem);
   }
 }
 
@@ -170,27 +201,6 @@ function traverseMembers(
   });
 }
 
-function isFunctionKind(apiItem: model.ApiItem): boolean {
-  return !!(apiItem.kind === model.ApiItemKind.Function);
-}
-
-function isClassKind(apiItem: model.ApiItem): Boolean {
-  return !!(apiItem.kind === model.ApiItemKind.Class);
-}
-
-function getKind(apiItem: model.ApiItem): model.ApiItemKind {
-  if (isFunctionKind(apiItem)) {
-    return model.ApiItemKind.Function;
-  }
-
-  // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
-  if (isClassKind(apiItem)) {
-    return model.ApiItemKind.Class;
-  }
-
-  return apiItem.kind;
-}
-
 function getAfterKind(kind: CanVisitKind): AfterVisitKind {
   return `After${kind}` as const;
 }
@@ -201,6 +211,20 @@ function createVisitor(docItems: types.ApiDocItem[]): Visitor {
 
   return {
     [model.ApiItemKind.Function](apiDocItem) {
+      if (utils.peekArray(namespaceApiDocItemStack) !== undefined) {
+        pushIntoProperties(namespaceApiDocItemStack, apiDocItem);
+      } else {
+        docItems.push(apiDocItem);
+      }
+    },
+    [model.ApiItemKind.Interface](apiDocItem) {
+      if (utils.peekArray(namespaceApiDocItemStack) !== undefined) {
+        pushIntoProperties(namespaceApiDocItemStack, apiDocItem);
+      } else {
+        docItems.push(apiDocItem);
+      }
+    },
+    [model.ApiItemKind.TypeAlias](apiDocItem) {
       if (utils.peekArray(namespaceApiDocItemStack) !== undefined) {
         pushIntoProperties(namespaceApiDocItemStack, apiDocItem);
       } else {
@@ -227,6 +251,7 @@ function createVisitor(docItems: types.ApiDocItem[]): Visitor {
     [model.ApiItemKind.Constructor](apiDocItem) {
       pushIntoProperties(classApiDocItemStack, apiDocItem);
     },
+
     [model.ApiItemKind.Namespace](apiDocItem) {
       namespaceApiDocItemStack.push(apiDocItem);
       docItems.push(apiDocItem);
@@ -253,24 +278,4 @@ function pushIntoProperties(
 
 interface GetApiDocItemsOptions {
   docNodeFormatter: DocNodeFormatter;
-}
-
-/**
- * Analyze the api.json file to get {@link types.ApiDocItem}.
- * @param apiJsonPath
- * @param options
- * @returns
- */
-export function getApiDocItems(
-  apiJsonPath: string,
-  options: GetApiDocItemsOptions
-): types.ApiDocItem[] {
-  const apiModel: model.ApiModel = new model.ApiModel();
-  const apiPackage: model.ApiPackage = apiModel.loadPackage(apiJsonPath);
-
-  const docItems: types.ApiDocItem[] = [];
-  const visitor = createVisitor(docItems);
-  traversePackage(apiPackage, visitor, options.docNodeFormatter);
-
-  return docItems;
 }
