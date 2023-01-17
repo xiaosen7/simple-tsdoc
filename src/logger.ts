@@ -2,7 +2,7 @@ import colors from "picocolors";
 
 interface Options {
   /**
-   * @defaultValue false
+   * @default false
    */
   silent?: boolean;
 }

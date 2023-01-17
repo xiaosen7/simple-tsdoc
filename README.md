@@ -16,7 +16,7 @@ A simple tool to generate markdown documentations from \*.d.ts files, support ap
 
 install: `npm i simple-tsdoc -g`
 
-Your project folder should have `tsconfig.json` and `package.json` file, when you use some custom tag,the [tsdoc.json](https://api-extractor.com/pages/configs/tsdoc_json/) file is required.
+Your project folder should have `tsconfig.json` and `package.json` file, if you want use some custom tag,the [tsdoc.json](https://api-extractor.com/pages/configs/tsdoc_json/) file is required.
 
 ```shell
 Usage:
@@ -46,11 +46,12 @@ simple-tsdoc ./dist/index.d.ts -s -m -o ./docs
 
 Support esm or commonjs.
 
-For more info, see [examples folder](<(https://github.com/xiaosen7/simple-tsdoc/tree/master/examples)>).
+You can see [examples folder](<(https://github.com/xiaosen7/simple-tsdoc/tree/master/examples)>) for more info.
 
-### basic
+### Basic
 
 ```ts
+import { ApiItemKind } from "@microsoft/api-extractor-model";
 import { resolve } from "path";
 import { tsdoc, IRenderingContext } from "../../";
 
@@ -60,6 +61,7 @@ tsdoc({
   banner: "# simple-tsdoc",
   RenderingContextConstructor: IRenderingContext,
   silent: true,
+  excludeKinds: [ApiItemKind.Interface, ApiItemKind.TypeAlias],
 }).catch((e) => {
   console.error(e);
 });
@@ -76,7 +78,7 @@ import { getMarkdownInfoMap } from "../../";
 async function main() {
   const entry = resolve(__dirname, "src", "index.d.ts");
   const outDir = resolve(__dirname, "out");
-  const info = await getMarkdownInfoMap(entry);
+  const info = await getMarkdownInfoMap({ entry });
 
   const tasks = Array.from(info.entries()).map(
     async ([name, { md, apiDocItem }]) => {
@@ -104,7 +106,7 @@ main().catch((e) => {
 });
 ```
 
-### custom style
+### Custom style
 
 ```ts
 import { resolve } from "path";
@@ -156,12 +158,15 @@ class CustomRenderingContext extends IRenderingContext {
   }
 }
 
-getMarkdownInfoMap(resolve(__dirname, "index.d.ts"), {
+getMarkdownInfoMap({
+  entry: resolve(__dirname, "index.d.ts"),
   RenderingContextConstructor: CustomRenderingContext,
 })
-  .then((infoMap) =>
-    emit(resolve(__dirname, "out"), infoMap, {
+  .then((apiInfoMap) =>
+    emit({
       multiple: true,
+      apiInfoMap,
+      output: resolve(__dirname, "out"),
     })
   )
   .catch((e) => {
@@ -169,9 +174,9 @@ getMarkdownInfoMap(resolve(__dirname, "index.d.ts"), {
   });
 ```
 
-### custom tag
+### Custom tsdoc tag
 
-A `tsdoc.json` file in your project folder is required, add the custom tag in `tsdoc.json` file.
+The `tsdoc.json` file in your project folder is required, and then you should add the custom tag in `tsdoc.json` file.
 
 `tsdoc.json`
 

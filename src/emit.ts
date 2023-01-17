@@ -5,37 +5,40 @@ import { dirname, join } from "path";
 import { ApiToMarkdownInfoMap } from "./types";
 
 export interface EmitOptions {
+  apiInfoMap: ApiToMarkdownInfoMap;
   /**
    * Add banner for output markdown file.
-   * @defaultValue ''
+   * @default ''
    */
   banner?: string;
-
   /**
    * Add footer for output markdown file.
-   * @defaultValue ''
+   * @default ''
    */
   footer?: string;
-
   /**
    * Emit a markdown file for per API.
-   * @defaultValue false
+   * @default false
    */
   multiple?: boolean;
+  /**
+   * Specify the output path.
+   */
+  output: string;
 }
 
-export async function emit(
-  output: string,
-  apiInfo: ApiToMarkdownInfoMap,
-  options: EmitOptions = {}
-) {
-  const banner = options.banner ?? "";
-  const footer = options.footer ?? "";
-  const multiple = options.multiple ?? false;
+export async function emit(options: EmitOptions) {
+  const {
+    output,
+    apiInfoMap,
+    banner = "",
+    footer = "",
+    multiple = false,
+  } = options;
 
   if (multiple) {
     await ensureDir(output);
-    const tasks = Array.from(apiInfo.entries()).map(
+    const tasks = Array.from(apiInfoMap.entries()).map(
       async ([apiName, { md }]) => {
         await writeFile(
           join(output, `${apiName}.md`),
@@ -47,7 +50,7 @@ export async function emit(
     await Promise.all(tasks);
   } else {
     const kindToMdArray = new Map<ApiItemKind, string[]>();
-    Array.from(apiInfo.values()).forEach(({ md, apiDocItem }) => {
+    Array.from(apiInfoMap.values()).forEach(({ md, apiDocItem }) => {
       let array = kindToMdArray.get(apiDocItem.kind);
       if (!array) {
         kindToMdArray.set(apiDocItem.kind, (array = []));

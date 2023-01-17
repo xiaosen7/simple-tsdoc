@@ -10,16 +10,12 @@
 
 **params**:
 
-- *param* output: `string` 
-
-- *param* apiInfo: `ApiToMarkdownInfoMap` 
-
-- *param* options?: `EmitOptions`
+- *param* options: `EmitOptions`
 
 **signature**:
 
 ```ts
-declare function emit(output: string, apiInfo: ApiToMarkdownInfoMap, options?: EmitOptions): Promise<void>;
+declare function emit(options: EmitOptions): Promise<void>;
 ```
 
 
@@ -32,12 +28,12 @@ Generate a temp api.json file.
 
 **params**:
 
-- *param* options: `Options$1`
+- *param* options: `GenerateApiJsonOptions`
 
 **signature**:
 
 ```ts
-declare function generateApiJson(options: Options$1): Promise<{
+declare function generateApiJson(options: GenerateApiJsonOptions): Promise<{
     apiJsonFilePath: string;
     clean: () => void;
 }>;
@@ -53,18 +49,16 @@ https://api-extractor.com/pages/configs/api-extractor_json/
 
 **kind**: Function
 
-Analyze the api.json file to get `types.ApiDocItem`.
+Analyze the api.json file to get `ApiDocItem`.
 
 **params**:
-
-- *param* apiJsonPath: `string` 
 
 - *param* options: `GetApiDocItemsOptions`
 
 **signature**:
 
 ```ts
-declare function getApiDocItems(apiJsonPath: string, options: GetApiDocItemsOptions): ApiDocItem[];
+declare function getApiDocItems(options: GetApiDocItemsOptions): ApiDocItem[];
 ```
 
 
@@ -77,14 +71,12 @@ Get the `ApiToMarkdownInfoMap` by the entry d.ts file.
 
 **params**:
 
-- *param* entry: `string` 
-
-- *param* options?: `Options`
+- *param* options: `GetMarkdownInfoMapOptions`
 
 **signature**:
 
 ```ts
-declare function getMarkdownInfoMap(entry: string, options?: Options): Promise<ApiToMarkdownInfoMap>;
+declare function getMarkdownInfoMap(options: GetMarkdownInfoMapOptions): Promise<ApiToMarkdownInfoMap>;
 ```
 
 
@@ -97,12 +89,12 @@ Emit markdown file by input d.ts files.
 
 **params**:
 
-- *param* options: `TsDocOptions`
+- *param* options: `TsdocOptions`
 
 **signature**:
 
 ```ts
-declare function tsdoc(options: TsDocOptions): Promise<void>;
+declare function tsdoc(options: TsdocOptions): Promise<void>;
 ```
 
 ## Class
@@ -388,7 +380,7 @@ const result = await generateApiJson({
       docNodeFormatter: new DocNodeFormatter(),
   });
   result.clean();
-const renderer = new Renderer(apiDocItems, IRenderingContext);
+const renderer = new Renderer({ apiDocItems, IRenderingContext });
   console.log(renderer.render())
 ```
 
@@ -400,14 +392,12 @@ Constructs a new instance of the `Renderer` class
 
 **params**:
 
-- *param* apiDocItems: `ApiDocItem[]` 
-
-- *param* RenderingContextConstructor: `ConstructorType<typeof IRenderingContext>`
+- *param* options: `RendererOptions`
 
 **signature**:
 
 ```ts
-constructor(apiDocItems: ApiDocItem[], RenderingContextConstructor: ConstructorType<typeof IRenderingContext>);
+constructor(options: RendererOptions);
 ```
 
 #### render
@@ -473,26 +463,71 @@ interface ApiDocItem {
 
 ```ts
 interface EmitOptions {
+  apiInfoMap: ApiToMarkdownInfoMap;
   banner?: string;
   footer?: string;
   multiple?: boolean;
+  output: string;
 }
 ```
 
 
 
-### TsDocOptions
+### GenerateApiJsonOptions
 
 **kind**: Interface
 
 **signature**:
 
 ```ts
-interface TsDocOptions extends EmitOptions {
-  input: string[];
-  output: string;
-  RenderingContextConstructor?: ConstructorType<typeof IRenderingContext>;
+interface GenerateApiJsonOptions {
+  entry: string;
   silent?: boolean;
+}
+```
+
+
+
+### GetApiDocItemsOptions
+
+**kind**: Interface
+
+**signature**:
+
+```ts
+interface GetApiDocItemsOptions {
+  apiJsonFilePath: string;
+  docNodeFormatter?: DocNodeFormatter;
+}
+```
+
+
+
+### RendererOptions
+
+**kind**: Interface
+
+**signature**:
+
+```ts
+interface RendererOptions {
+  apiDocItems: ApiDocItem[];
+  excludeKinds?: ApiItemKind[];
+  RenderingContextConstructor?: ConstructorType<typeof IRenderingContext>;
+}
+```
+
+
+
+### TsdocOptions
+
+**kind**: Interface
+
+**signature**:
+
+```ts
+interface TsdocOptions extends Omit<GenerateApiJsonOptions & GetApiDocItemsOptions & RendererOptions & EmitOptions, "entry" | "apiInfoMap" | "apiDocItems" | "apiJsonFilePath"> {
+  input: string[];
 }
 ```
 
@@ -535,6 +570,18 @@ declare type ConstructorType<T extends new (...args: any[]) => any> = new (...ar
 
 ```ts
 declare type CustomTagName = `@${string}`;
+```
+
+
+
+### GetMarkdownInfoMapOptions
+
+**kind**: TypeAlias
+
+**signature**:
+
+```ts
+declare type GetMarkdownInfoMapOptions = Omit<GenerateApiJsonOptions & GetApiDocItemsOptions & RendererOptions, "apiJsonFilePath" | "apiDocItems">;
 ```
 
 

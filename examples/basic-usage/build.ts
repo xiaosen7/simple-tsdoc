@@ -1,3 +1,4 @@
+import { ApiItemKind } from "@microsoft/api-extractor-model";
 import { resolve } from "path";
 import { tsdoc, IRenderingContext } from "../../";
 
@@ -7,6 +8,7 @@ tsdoc({
   banner: "# simple-tsdoc",
   RenderingContextConstructor: IRenderingContext,
   silent: true,
+  excludeKinds: [ApiItemKind.Interface, ApiItemKind.TypeAlias],
 }).catch((e) => {
   console.error(e);
 });

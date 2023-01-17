@@ -4,6 +4,22 @@
 
 ---
 
+### emit
+
+**kind**: Function
+
+**params**:
+
+- *param* options: `EmitOptions`
+
+**signature**:
+
+```ts
+declare function emit(options: EmitOptions): Promise<void>;
+```
+
+
+
 ### generateApiJson
 
 **kind**: Function
@@ -12,14 +28,14 @@ Generate a temp api.json file.
 
 **params**:
 
-- *param* options: `Options$1`
+- *param* options: `GenerateApiJsonOptions`
 
 **signature**:
 
 ```ts
-declare function generateApiJson(options: Options$1): Promise<{
-  apiJsonFilePath: string;
-  clean: () => void;
+declare function generateApiJson(options: GenerateApiJsonOptions): Promise<{
+    apiJsonFilePath: string;
+    clean: () => void;
 }>;
 ```
 
@@ -33,21 +49,16 @@ https://api-extractor.com/pages/configs/api-extractor_json/
 
 **kind**: Function
 
-Analyze the api.json file to get `types.ApiDocItem`.
+Analyze the api.json file to get `ApiDocItem`.
 
 **params**:
-
-- *param* apiJsonPath: `string` 
 
 - *param* options: `GetApiDocItemsOptions`
 
 **signature**:
 
 ```ts
-declare function getApiDocItems(
-  apiJsonPath: string,
-  options: GetApiDocItemsOptions
-): ApiDocItem[];
+declare function getApiDocItems(options: GetApiDocItemsOptions): ApiDocItem[];
 ```
 
 
@@ -60,17 +71,12 @@ Get the `ApiToMarkdownInfoMap` by the entry d.ts file.
 
 **params**:
 
-- *param* entry: `string` 
-
-- *param* options?: `Options`
+- *param* options: `GetMarkdownInfoMapOptions`
 
 **signature**:
 
 ```ts
-declare function getMarkdownInfoMap(
-  entry: string,
-  options?: Options
-): Promise<ApiToMarkdownInfoMap>;
+declare function getMarkdownInfoMap(options: GetMarkdownInfoMapOptions): Promise<ApiToMarkdownInfoMap>;
 ```
 
 
@@ -83,12 +89,12 @@ Emit markdown file by input d.ts files.
 
 **params**:
 
-- *param* options: `TsDocOptions`
+- *param* options: `TsdocOptions`
 
 **signature**:
 
 ```ts
-declare function tsdoc(options: TsDocOptions): Promise<void>;
+declare function tsdoc(options: TsdocOptions): Promise<void>;
 ```
 
 ## Class
@@ -308,15 +314,14 @@ protected appendSignature(signature: Annotation["signature"]): void;
 **signature**:
 
 ```ts
-protected appendTag(
-    tagName: StandardTagName,
-    value: string | undefined
-  ): void;
+protected appendTag(tagName: StandardTagName, value: string | undefined): void;
 ```
 
 #### draw
 
 **kind**: Method
+
+Get the api final rendered markdown content.
 
 **signature**:
 
@@ -375,7 +380,7 @@ const result = await generateApiJson({
       docNodeFormatter: new DocNodeFormatter(),
   });
   result.clean();
-const renderer = new Renderer(apiDocItems, IRenderingContext);
+const renderer = new Renderer({ apiDocItems, IRenderingContext });
   console.log(renderer.render())
 ```
 
@@ -387,17 +392,12 @@ Constructs a new instance of the `Renderer` class
 
 **params**:
 
-- *param* apiDocItems: `ApiDocItem[]` 
-
-- *param* RenderingContextConstructor: `ConstructorType<typeof IRenderingContext>`
+- *param* options: `RendererOptions`
 
 **signature**:
 
 ```ts
-constructor(
-    apiDocItems: ApiDocItem[],
-    RenderingContextConstructor: ConstructorType<typeof IRenderingContext>
-  );
+constructor(options: RendererOptions);
 ```
 
 #### render
@@ -408,124 +408,6 @@ constructor(
 
 ```ts
 render(): ApiToMarkdownInfoMap;
-```
-
-## Interface
-
----
-
-### Annotation
-
-**kind**: Interface
-
-**signature**:
-
-```ts
-interface Annotation {
-  description: string;
-  params: Array<{
-    name: string;
-    description: string;
-    type?: string;
-    isOptional?: boolean;
-  }>;
-  returns?: string;
-  signature: string;
-  tagNameToDescMap: Map<StandardTagName, undefined | string>;
-}
-```
-
-
-
-### ApiDocItem
-
-**kind**: Interface
-
-**signature**:
-
-```ts
-interface ApiDocItem {
-  annotation: Annotation;
-  apiItem: model.ApiDeclaredItem;
-  kind: model.ApiItemKind;
-  name: string;
-  properties?: ApiDocItem[];
-}
-```
-
-
-
-### TsDocOptions
-
-**kind**: Interface
-
-**signature**:
-
-```ts
-interface TsDocOptions extends EmitOptions {
-  input: string[];
-  output: string;
-  RenderingContextConstructor?: ConstructorType<typeof IRenderingContext>;
-  silent?: boolean;
-}
-```
-
-## TypeAlias
-
----
-
-### ApiToMarkdownInfoMap
-
-**kind**: TypeAlias
-
-**signature**:
-
-```ts
-declare type ApiToMarkdownInfoMap = Map<
-  string,
-  {
-    md: string;
-    apiDocItem: ApiDocItem;
-  }
->;
-```
-
-
-
-### ConstructorType
-
-**kind**: TypeAlias
-
-**signature**:
-
-```ts
-declare type ConstructorType<T extends new (...args: any[]) => any> = new (
-  ...args: ConstructorParameters<T>
-) => InstanceType<T>;
-```
-
-
-
-### CustomTagName
-
-**kind**: TypeAlias
-
-**signature**:
-
-```ts
-declare type CustomTagName = `@${string}`;
-```
-
-
-
-### StandardTagName
-
-**kind**: TypeAlias
-
-**signature**:
-
-```ts
-declare type StandardTagName = `@${keyof typeof StandardTags}`;
 ```
 
 

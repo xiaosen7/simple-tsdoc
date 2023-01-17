@@ -29,7 +29,10 @@ describe("base", () => {
 
     result.clean();
 
-    const renderer = new Renderer(apiDocItems, IRenderingContext);
+    const renderer = new Renderer({
+      apiDocItems,
+      RenderingContextConstructor: IRenderingContext,
+    });
 
     await emit(resolve("temp", "out2.md"), renderer.render());
   });

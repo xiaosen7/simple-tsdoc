@@ -1,5 +1,6 @@
 import * as model from "@microsoft/api-extractor-model";
 import * as types from "./types";
+import { ApiDocItem } from "./types";
 import * as tsdoc from "@microsoft/tsdoc";
 import { DocNodeFormatter } from "./models/DocNodeFormatter";
 import * as utils from "./utils";
@@ -20,22 +21,32 @@ type Visitor = Partial<
   Record<CanVisitKind | AfterVisitKind, (apiDocItem: types.ApiDocItem) => any>
 >;
 
+export interface GetApiDocItemsOptions {
+  /**
+   * default new DocNodeFormatter()
+   */
+  docNodeFormatter?: DocNodeFormatter;
+  apiJsonFilePath: string;
+}
+
 /**
- * Analyze the api.json file to get {@link types.ApiDocItem}.
+ * Analyze the api.json file to get {@link ApiDocItem}.
  * @param apiJsonPath
  * @param options
  * @returns
  */
 export function getApiDocItems(
-  apiJsonPath: string,
   options: GetApiDocItemsOptions
 ): types.ApiDocItem[] {
+  const { apiJsonFilePath, docNodeFormatter = new DocNodeFormatter() } =
+    options;
+
   const apiModel: model.ApiModel = new model.ApiModel();
-  const apiPackage: model.ApiPackage = apiModel.loadPackage(apiJsonPath);
+  const apiPackage: model.ApiPackage = apiModel.loadPackage(apiJsonFilePath);
 
   const docItems: types.ApiDocItem[] = [];
   const visitor = createVisitor(docItems);
-  traversePackage(apiPackage, visitor, options.docNodeFormatter);
+  traversePackage(apiPackage, visitor, docNodeFormatter);
 
   return docItems;
 }
@@ -274,8 +285,4 @@ function pushIntoProperties(
 
     parent.properties.push(apiDocItem);
   }
-}
-
-interface GetApiDocItemsOptions {
-  docNodeFormatter: DocNodeFormatter;
 }

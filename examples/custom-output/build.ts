@@ -6,7 +6,7 @@ import { getMarkdownInfoMap } from "../../";
 async function main() {
   const entry = resolve(__dirname, "src", "index.d.ts");
   const outDir = resolve(__dirname, "out");
-  const info = await getMarkdownInfoMap(entry);
+  const info = await getMarkdownInfoMap({ entry });
 
   const tasks = Array.from(info.entries()).map(
     async ([name, { md, apiDocItem }]) => {

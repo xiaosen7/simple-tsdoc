@@ -1,5 +1,11 @@
 # simple-tsdoc
 
+## 2.0.6
+
+### Patch Changes
+
+- Support specify kinds to be not rendered.
+
 ## 2.0.5
 
 ### Patch Changes

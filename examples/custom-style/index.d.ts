@@ -47,17 +47,17 @@ declare type CustomTagName = `@${string}`;
 interface EmitOptions {
   /**
    * Add banner for output markdown file.
-   * @defaultValue ''
+   * @default ''
    */
   banner?: string;
   /**
    * Add footer for output markdown file.
-   * @defaultValue ''
+   * @default ''
    */
   footer?: string;
   /**
    * Emit a markdown file for per API.
-   * @defaultValue false
+   * @default false
    */
   multiple?: boolean;
 }
@@ -181,7 +181,7 @@ interface TsDocOptions extends EmitOptions {
   /**
    * The context to draw markdown content.
    *
-   * @defaultValue `IRenderingContext`
+   * @default `IRenderingContext`
    */
   RenderingContextConstructor?: ConstructorType<typeof IRenderingContext>;
 }

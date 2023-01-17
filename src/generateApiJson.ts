@@ -9,7 +9,10 @@ import {
 } from "@microsoft/api-extractor";
 import { TSDocConfigFile } from "@microsoft/tsdoc-config";
 
-interface Options {
+export interface GenerateApiJsonOptions {
+  /**
+   * The entry of d.ts file.
+   */
   entry: string;
   silent?: boolean;
 }
@@ -20,7 +23,9 @@ interface Options {
  * @returns
  * @see https://api-extractor.com/pages/configs/api-extractor_json/
  */
-export async function generateApiJson(options: Options): Promise<{
+export async function generateApiJson(
+  options: GenerateApiJsonOptions
+): Promise<{
   apiJsonFilePath: string;
   clean: () => void;
 }> {

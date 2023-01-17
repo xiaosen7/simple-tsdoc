@@ -47,12 +47,15 @@ class CustomRenderingContext extends IRenderingContext {
   }
 }
 
-getMarkdownInfoMap(resolve(__dirname, "index.d.ts"), {
+getMarkdownInfoMap({
+  entry: resolve(__dirname, "index.d.ts"),
   RenderingContextConstructor: CustomRenderingContext,
 })
-  .then((infoMap) =>
-    emit(resolve(__dirname, "out"), infoMap, {
+  .then((apiInfoMap) =>
+    emit({
       multiple: true,
+      apiInfoMap,
+      output: resolve(__dirname, "out"),
     })
   )
   .catch((e) => {

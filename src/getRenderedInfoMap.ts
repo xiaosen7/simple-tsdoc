@@ -1,38 +1,29 @@
-import { generateApiJson } from "./generateApiJson";
-import { getApiDocItems } from "./getApiDocItems";
-import { DocNodeFormatter } from "./models/DocNodeFormatter";
-import { Renderer } from "./models/Renderer";
-import { IRenderingContext } from "./models/IRenderingContext";
-import { ConstructorType } from "./types";
+import { generateApiJson, GenerateApiJsonOptions } from "./generateApiJson";
+import { getApiDocItems, GetApiDocItemsOptions } from "./getApiDocItems";
+import { Renderer, RendererOptions } from "./models/Renderer";
 
-interface Options {
-  RenderingContextConstructor?: ConstructorType<typeof IRenderingContext>;
-  DocNodeFormatterConstructor?: ConstructorType<typeof DocNodeFormatter>;
-}
+export type GetMarkdownInfoMapOptions = Omit<
+  GenerateApiJsonOptions & GetApiDocItemsOptions & RendererOptions,
+  "apiJsonFilePath" | "apiDocItems"
+>;
+
 /**
  * Get the `ApiToMarkdownInfoMap` by the entry d.ts file.
  * @param entry
  * @param options
  * @returns
  */
-export async function getMarkdownInfoMap(entry: string, options: Options = {}) {
-  const {
-    RenderingContextConstructor = IRenderingContext,
-    DocNodeFormatterConstructor = DocNodeFormatter,
-  } = options;
+export async function getMarkdownInfoMap(options: GetMarkdownInfoMapOptions) {
+  const { clean, apiJsonFilePath } = await generateApiJson(options);
 
-  const { clean, apiJsonFilePath } = await generateApiJson({
-    entry,
-    silent: true,
-  });
-
-  const apiDocItems = getApiDocItems(apiJsonFilePath, {
-    docNodeFormatter: new DocNodeFormatterConstructor(),
+  const apiDocItems = getApiDocItems({
+    ...options,
+    apiJsonFilePath,
   });
 
   clean();
 
-  const renderer = new Renderer(apiDocItems, RenderingContextConstructor);
+  const renderer = new Renderer({ apiDocItems, ...options });
 
   return renderer.render();
 }
